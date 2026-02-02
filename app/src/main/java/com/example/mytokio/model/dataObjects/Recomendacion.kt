@@ -7,5 +7,6 @@ data class Recomendacion(
     override val id: Int,
     @DrawableRes override val imagen: Int,
     @StringRes override val titulo: Int,
+    @StringRes override val url: Int,
     val descripcion: String
-) : Categoria(id, imagen, titulo)
+) : Categoria(id, imagen, titulo, url)
