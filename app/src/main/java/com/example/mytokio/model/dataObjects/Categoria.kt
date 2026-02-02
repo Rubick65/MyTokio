@@ -7,5 +7,4 @@ open class Categoria(
     open val id: Int,
     @DrawableRes open val imagen: Int,
     @StringRes open val titulo: Int,
-    @StringRes open val url: Int
 )

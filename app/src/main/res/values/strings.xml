@@ -1,3 +1,130 @@
 <resources>
-    <string name="app_name">MyTokio</string>
+    <string name="app_name" translatable="false">MyTokio</string>
+    <!-- ============CATEGORIAS============ -->
+    <string name="categoria_1" translatable="false">Zonas tematicas</string>
+    <string name="categoria_2" translatable="false">Cafeterias/Restaurantes</string>
+    <string name="categoria_3" translatable="false">Parques</string>
+    <string name="categoria_4" translatable="false">Templos</string>
+    <string name="categoria_5" translatable="false">Monumentos</string>
+
+    <!-- ============ZONAS TEMATICAS============ -->
+
+    <string name="zona_tematica_titulo_1" translatable="false">Tokyo Joypolis</string>
+    <string name="zona_tematica_titulo_2" translatable="false">Tokyo Dome City Attractions</string>
+    <string name="zona_tematica_titulo_3" translatable="false">Asakusa Hanayashiki</string>
+    <string name="zona_tematica_titulo_4" translatable="false">Arakawa Amusement Park</string>
+    <string name="zona_tematica_titulo_5" translatable="false">Sanrio Puroland</string>
+    <string name="zona_tematica_titulo_6" translatable="false">Namco Namja Town</string>
+    <string name="zona_tematica_titulo_7" translatable="false">Small worlds tokyo</string>
+    <string name="zona_tematica_titulo_8" translatable="false">TeamLab Planets</string>
+    <string name="zona_tematica_titulo_9" translatable="false">Tokyo One Piece Tower</string>
+    <string name="zona_tematica_titulo_10" translatable="false">The JOJO world</string>
+
+    <string name="zona_tematica_descripcion_1" translatable="false">Parque de atracciones interior operado por SEGA en Odaiba. Tiene múltiples juegos tecnológicos, experiencias VR, simuladores y atracciones interactivas basadas en franquicias de videojuegos y anime. Es ideal para días de lluvia o fans de entretenimiento digital.</string>
+    <string name="zona_tematica_descripcion_2" translatable="false">Área de ocio dentro del complejo Tokyo Dome City que incluye montañas rusas, noria, juegos mecánicos y atracciones familiares. También forma parte de un centro más amplio con tiendas y entretenimiento.</string>
+    <string name="zona_tematica_descripcion_3" translatable="false">El parque de atracciones más antiguo de Japón, con ambiente retro y más de 20 atracciones, desde montañas rusas clásicas hasta juegos clásicos tipo feria.</string>
+    <string name="zona_tematica_descripcion_4" translatable="false">Parque de diversiones clásico y familiar junto al río Sumida con carruseles, mini montaña rusa, noria pequeña y juegos tradicionales. Es muy apto para familias con niños pequeños y combina entretenimiento con un ambiente tranquilo.</string>
+    <string name="zona_tematica_descripcion_5" translatable="false">Parque temático indoor dedicado a personajes de Sanrio (Hello Kitty, My Melody, Gudetama, etc.). Ofrece espectáculos, atracciones suaves, tiendas de merch y restaurantes dentro del parque con ambiente adorable.</string>
+    <string name="zona_tematica_descripcion_6" translatable="false">Parque temático interior en Sunshine City, Ikebukuro, con zonas de juego, comida temática (incluyendo un estadio de gyozas japonesas) y atracciones suaves. Es ideal para familias y amantes de experiencias culinarias divertidas.</string>
+    <string name="zona_tematica_descripcion_7" translatable="false">Parque de miniaturas gigantes con mundos detallados de diferentes temáticas (anime, cultura pop). Es más una galería interactiva a escala gigante que un parque de atracciones tradicional, pero ofrece una experiencia temática muy inmersiva para fans de miniaturas y cultura japonesa.</string>
+    <string name="zona_tematica_descripcion_8" translatable="false">Experiencia artística inmersiva en Toyosu donde caminas entre instalaciones de arte digital y luz interactiva que reaccionan al movimiento y presencia de las personas. Aunque es arte más que un parque temático clásico, se vive como una aventura sensorial única. </string>
+    <string name="zona_tematica_descripcion_9" translatable="false">Antiguamente fue un parque temático indoor dentro de Tokyo Tower basado en One Piece, con juegos, shows y zonas interactivas basadas en la serie.</string>
+    <string name="zona_tematica_descripcion_10" translatable="false">Espacio temático interactivo dedicado al popular anime y manga JoJo’s Bizarre Adventure.</string>
+
+    <!-- ============CAFETERIAS============ -->
+    <string name="cafeteria_titulo_1" translatable="false">Pokémon Café Tokyo</string>
+    <string name="cafeteria_titulo_2" translatable="false">Awakening Cafe</string>
+    <string name="cafeteria_titulo_3" translatable="false">cafe and DINE in "nope"</string>
+    <string name="cafeteria_titulo_4" translatable="false">Tokyo Toy Cafe</string>
+    <string name="cafeteria_titulo_5" translatable="false">Harry Potter Cafe</string>
+    <string name="cafeteria_titulo_6" translatable="false">Ninja Tokyo</string>
+    <string name="cafeteria_titulo_7" translatable="false">FabCafe Tokyo</string>
+    <string name="cafeteria_titulo_8" translatable="false">Alice in Fantasy Book</string>
+    <string name="cafeteria_titulo_9" translatable="false">Sukiyabashi Jiro</string>
+    <string name="cafeteria_titulo_10" translatable="false">Tofuya Ukai</string>
+
+    <string name="cafeteria_descripcion_1" translatable="false">Café temático oficial inspirado en Pokémon, con platos y bebidas decorados con personajes de la saga. El menú cambia según temporada y a menudo incluye platos especiales, además de merchandising exclusivo para comprar. Es necesario reservar con antelación por su popularidad.</string>
+    <string name="cafeteria_descripcion_2" translatable="false">Café con temática de supervivencia estilo escape room, donde los pedidos y la ambientación te hacen sentir parte de una historia. El restaurante mezcla comida con acertijos y misiones para resolver durante la experiencia.</string>
+    <string name="cafeteria_descripcion_3" translatable="false">Espacio moderno y temático que combina platos creativos con decoración contemporánea y elementos sorpresa. Es popular entre los amantes de lugares con diseño único y original.</string>
+    <string name="cafeteria_descripcion_4" translatable="false">Café donde puedes disfrutar de bebidas y postres mientras estás rodeado de juguetes coleccionables y decoración. Ideal para fotos y ambiente relajado.</string>
+    <string name="cafeteria_descripcion_5" translatable="false">Café temático basado en el mundo de Harry Potter donde cada plato y bebida tiene elementos inspirados en la saga.</string>
+    <string name="cafeteria_descripcion_6" translatable="false">Restaurante temático que recrea una aldea ninja tradicional del Japón feudal, con decoraciones tipo Edo y personal vestido como ninjas que sirven y realizan pequeños trucos. </string>
+    <string name="cafeteria_descripcion_7" translatable="false">Café que combina comidas típicas de café con actividades creativas como talleres de impresión láser o diseño.</string>
+    <string name="cafeteria_descripcion_8" translatable="false">Café temático inspirado en Alicia en el País de las Maravillas. La decoración, los menús y las presentaciones están inspiradas en el cuento, con platos y bebidas que parecen sacados del libro.</string>
+    <string name="cafeteria_descripcion_9" translatable="false">Restaurante de sushi de renombre mundial, conocido por su sushi tradicional extremadamente refinado. Es famoso entre los amantes del sushi por su calidad excepcional.</string>
+    <string name="cafeteria_descripcion_10" translatable="false">Restaurante tradicional japonés cerca de Tokyo Tower, especializado en preparaciones de tofu y cocina kaiseki japonesa. Ofrece una experiencia gastronómica típica japonesa en un ambiente elegante con jardín.</string>
+
+    <!-- ============PARQUES============ -->
+    <string name="parque_titulo_1" translatable="false">Shinjuku Gyoen National Garden</string>
+    <string name="parque_titulo_2" translatable="false">Yoyogi Park</string>
+    <string name="parque_titulo_3" translatable="false">Ueno Park</string>
+    <string name="parque_titulo_4" translatable="false">Kasai Rinkai Park</string>
+    <string name="parque_titulo_5" translatable="false">Shakujii Park</string>
+    <string name="parque_titulo_6" translatable="false">Shiba Park</string>
+    <string name="parque_titulo_7" translatable="false">Shinagawa Kumin Park</string>
+    <string name="parque_titulo_8" translatable="false">Akatsuka Park</string>
+    <string name="parque_titulo_9" translatable="false">Arakawa Nature Park</string>
+    <string name="parque_titulo_10" translatable="false">Egota-no-Mori Park</string>
+
+    <string name="parque_descripcion_1" translatable="false">Un enorme parque-jardín con estilo japonés, inglés y francés, famoso por sus cerezos en flor en primavera y amplios senderos tranquilos en el centro de Tokio.</string>
+    <string name="parque_descripcion_2" translatable="false">Un parque urbano muy popular junto a Harajuku que combina zonas abiertas, bosquecillos, espacios para picnic y actividades al aire libre.</string>
+    <string name="parque_descripcion_3" translatable="false">Un clásico de Tokio: combina naturaleza con cultura. Aquí encontrarás museos, templos, un zoológico y estanques —especialmente bonito durante el hanami (cerezos en flor).</string>
+    <string name="parque_descripcion_4" translatable="false">Un parque enorme junto a la bahía con un santuario de aves, playa artificial y la famosa gran noria “Diamond and Flower Ferris Wheel”, perfecta para vistas panorámicas.</string>
+    <string name="parque_descripcion_5" translatable="false">Espacio natural con dos estanques grandes, perfectos para pasear o hacer observación de aves, y ruinas históricas alrededor del estanque.</string>
+    <string name="parque_descripcion_6" translatable="false">El parque público más antiguo de Japón, situado junto a la Torre de Tokio y el templo Zojoji; combina historia con zonas verdes relajantes.</string>
+    <string name="parque_descripcion_7" translatable="false">Un parque menos conocido pero precioso, con un lago de agua salada, muchos árboles y espacios tranquilos para pasear, ideal para familias.</string>
+    <string name="parque_descripcion_8" translatable="false">Espacio amplio con restos del castillo de Akatsuka, zonas deportivas y áreas con naturaleza variada, haciéndolo ideal para actividades al aire libre.</string>
+    <string name="parque_descripcion_9" translatable="false">Un parque de barrio con áreas de juego para niños, pista de bicicletas, lagos y jardines, perfecto para familias o un paseo relajado.</string>
+    <string name="parque_descripcion_10" translatable="false">Gran parque urbano con zonas de juegos, espacio abierto, estanque y senderos; muy popular entre residentes por sus amplias áreas verdes.</string>
+
+    <!-- ============TEMPLOS============ -->
+    <string name="templo_titulo_1" translatable="false"></string>
+    <string name="templo_titulo_2" translatable="false"></string>
+    <string name="templo_titulo_3" translatable="false"></string>
+    <string name="templo_titulo_4" translatable="false"></string>
+    <string name="templo_titulo_5" translatable="false"></string>
+    <string name="templo_titulo_6" translatable="false"></string>
+    <string name="templo_titulo_7" translatable="false"></string>
+    <string name="templo_titulo_8" translatable="false"></string>
+    <string name="templo_titulo_9" translatable="false"></string>
+    <string name="templo_titulo_10" translatable="false"></string>
+
+    <string name="templo_descripcion_1" translatable="false"></string>
+    <string name="templo_descripcion_2" translatable="false"></string>
+    <string name="templo_descripcion_3" translatable="false"></string>
+    <string name="templo_descripcion_4" translatable="false"></string>
+    <string name="templo_descripcion_5" translatable="false"></string>
+    <string name="templo_descripcion_6" translatable="false"></string>
+    <string name="templo_descripcion_7" translatable="false"></string>
+    <string name="templo_descripcion_8" translatable="false"></string>
+    <string name="templo_descripcion_9" translatable="false"></string>
+    <string name="templo_descripcion_10" translatable="false"></string>
+
+    <!-- ============MONUMENTOS============ -->
+    <string name="monumento_titulo_1" translatable="false"></string>
+    <string name="monumento_titulo_2" translatable="false"></string>
+    <string name="monumento_titulo_3" translatable="false"></string>
+    <string name="monumento_titulo_4" translatable="false"></string>
+    <string name="monumento_titulo_5" translatable="false"></string>
+    <string name="monumento_titulo_6" translatable="false"></string>
+    <string name="monumento_titulo_7" translatable="false"></string>
+    <string name="monumento_titulo_8" translatable="false"></string>
+    <string name="monumento_titulo_9" translatable="false"></string>
+    <string name="monumento_titulo_10" translatable="false"></string>
+
+    <string name="monumento_descripcion_1" translatable="false"></string>
+    <string name="monumento_descripcion_2" translatable="false"></string>
+    <string name="monumento_descripcion_3" translatable="false"></string>
+    <string name="monumento_descripcion_4" translatable="false"></string>
+    <string name="monumento_descripcion_5" translatable="false"></string>
+    <string name="monumento_descripcion_6" translatable="false"></string>
+    <string name="monumento_descripcion_7" translatable="false"></string>
+    <string name="monumento_descripcion_8" translatable="false"></string>
+    <string name="monumento_descripcion_9" translatable="false"></string>
+    <string name="monumento_descripcion_10" translatable="false"></string>
+
+    <!-- ============URL============ -->
+    <string name="url_joypolis" translatable="false">Tokyo Joypolis, Tokyo</string>
+
+
 </resources>
