@@ -1,4 +1,14 @@
 <resources>
+
+    <!-- ============PANTALLAS============ -->
+    <string name="categoria_nombre" translatable="false">Categoria</string>
+    <string name="recomendacion_nombre" translatable="false">Recomendaciones</string>
+
+
+    <!-- ============FLECHA============ -->
+    <string name="flecha_atras" translatable="false">Flecha para ir hacia atras</string>
+
+
     <string name="app_name" translatable="false">MyTokio</string>
     <!-- ============CATEGORIAS============ -->
     <string name="categoria_1" translatable="false">Zonas tematicas</string>
