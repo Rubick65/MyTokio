@@ -19,11 +19,11 @@ import com.example.mytokio.ui.theme.MyTokioTheme
 
 @Composable
 fun ButtonMap(
-    @StringRes urlID: Int,
+    @StringRes urlId: Int,
     )
 {
     val context = LocalContext.current //Necesario para ejecutar intents
-    val url = stringResource(id = urlID)
+    val url = stringResource(id = urlId)
     //formato para abrir google maps
     val uri = Uri.parse("geo:0,0?q=${Uri.encode(url)}")
 
@@ -61,7 +61,7 @@ fun ButtonMap(
 @Composable
 fun PreviewButtonMap() {
     MyTokioTheme {   // si usas MaterialTheme o tu tema propio
-        ButtonMap(urlID = R.string.url_palacio)
+        ButtonMap(urlId = R.string.url_palacio)
     }
 }
 
