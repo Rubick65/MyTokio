@@ -10,7 +10,7 @@ import com.example.mytokio.R
 
 // Set of Material typography styles to start with
 
-val Bungee =FontFamily(
+val Bungee = FontFamily(
     Font(R.font.bungee_regular)
 )
 
@@ -36,6 +36,13 @@ val Typography = Typography(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.5.sp
+    ),
+    headlineSmall = TextStyle(
+        fontFamily = Bungee,
+        fontWeight = FontWeight.Normal,
+        fontSize = 20.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     )

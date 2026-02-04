@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -21,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -29,10 +31,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mytokio.R
 import com.example.mytokio.data.categorias
+import com.example.mytokio.data.monumentos
 import com.example.mytokio.data.zonasTematicas
 import com.example.mytokio.model.dataObjects.Categoria
 import com.example.mytokio.ui.theme.MyTokioTheme
 
+/**
+ * Crea la card general para todas las categorías y recomendaciones
+ */
 @Composable
 fun SelectionCard(
     modifier: Modifier = Modifier,
@@ -40,65 +46,91 @@ fun SelectionCard(
     hasBorder: Boolean,
     categoria: Categoria
 ) {
+    // Carta principal para todas las categorías y recomendaciones
     Card(
-        onClick = onClick,
-        modifier = modifier.padding(end = 40.dp, top = 1.dp),
-        shape = RoundedCornerShape(
-            topStart = 0.dp,
-            topEnd = 50.dp,
-            bottomStart = 0.dp,
-            bottomEnd = 50.dp
+        onClick = onClick, // Que ocurrirá cuando se haga click
+        modifier = modifier.padding(
+            end = dimensionResource(R.dimen.category_card_end_padding),
+            top = dimensionResource(R.dimen.category_card_top_padding)
+        ),
+        shape = RoundedCornerShape( // Forma de las cards
+            topEnd = dimensionResource(R.dimen.top_bottom_end),
+            bottomEnd = dimensionResource(R.dimen.top_bottom_end)
         ),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primary
+            containerColor = MaterialTheme.colorScheme.primary // Color para la card
         ),
-        border = BorderStroke(
-            width = 4.dp,
+        border = BorderStroke( // Borde para la card
+            width = dimensionResource(R.dimen.card_border_width),
             color = Color.Black
         )
 
     ) {
-        Row(
+        // Crea la información que se encuentra dentro de la card
+        SelectionCardInformation(hasBorder = hasBorder, categoria = categoria)
+
+    }
+}
+
+
+/**
+ * Crea la imagen y el texto de cada card
+ */
+@Composable
+fun SelectionCardInformation(
+    modifier: Modifier = Modifier,
+    hasBorder: Boolean,
+    categoria: Categoria
+) {
+    Row( // Todos los elementos están en fila
+        modifier = modifier
+            .fillMaxWidth(), // Ocupa el maximo espacio disponible
+        verticalAlignment = Alignment.CenterVertically // Todos sus elementos estan centrados verticalmente
+    ) {
+        Card( // Card para contener a la imagen
             modifier = Modifier
-                .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Card(
-                modifier = Modifier
-                    .size(100.dp)
-                    .padding(top = 10.dp, bottom = 10.dp, start = 10.dp, end = 5.dp)
-                    .weight(0.8f),
-                shape = RoundedCornerShape(
-                    0.dp
-                ),
+                .height(dimensionResource(R.dimen.image_card_height))// Todas tienen un tamaño fijo
 
-                border = if (hasBorder) BorderStroke(width = 2.dp, color = Color.Black) else null
-
-            ) {
-                Image(
-                    painter = painterResource(categoria.imagen),
-                    contentDescription = stringResource(categoria.titulo),
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier,
+                .padding(
+                    top = dimensionResource(R.dimen.image_card_padding),
+                    bottom = dimensionResource(R.dimen.image_card_padding),
+                    start = dimensionResource(R.dimen.image_card_padding),
+                    end = dimensionResource(R.dimen.image_card_end_padding)
                 )
+                .weight(0.8f),
+            shape = RoundedCornerShape( // El borde no está redondeado
+                0.dp
+            ),
 
-            }
+            // En caso de que se indique que tiene que tener borde se pondrá uno
+            border = if (hasBorder) BorderStroke(
+                width = dimensionResource(R.dimen.image_card_border),
+                color = Color.Black
+            ) else null
 
-
-            Text(
-                text = stringResource(categoria.titulo),
-                style = MaterialTheme.typography.headlineSmall,
-                textAlign = TextAlign.Start,
-                modifier = Modifier
-                    .weight(1.2f),
-                softWrap = true,
-                maxLines = Int.MAX_VALUE,
-                overflow = TextOverflow.Clip
+        ) {
+            Image(
+                // Imagen que representa cada catetegoría o recomendación
+                painter = painterResource(categoria.imagen),
+                contentDescription = stringResource(categoria.titulo),
+                contentScale = ContentScale.Crop, // Ocupa todo el espacio
+                modifier = Modifier,
             )
-
 
         }
 
+
+        Text( // Texto con el nombre de cada categoría y/o recomendación
+            text = stringResource(categoria.titulo),
+            color = MaterialTheme.colorScheme.tertiary,
+            style = MaterialTheme.typography.headlineSmall,
+            textAlign = TextAlign.Start,
+            modifier = Modifier
+                .weight(1.2f),
+            softWrap = true,
+            maxLines = Int.MAX_VALUE,
+            overflow = TextOverflow.Clip
+        )
     }
 }
 
@@ -118,7 +150,7 @@ fun SelectionCardList(
             modifier = Modifier.fillMaxSize()
         )
 
-        LazyColumn(modifier = modifier.fillMaxSize()) {
+        LazyColumn(modifier = Modifier) {
 
             items(items = selectionList) { item ->
 
@@ -154,8 +186,8 @@ fun SelectionCardPreview() {
 fun SelectionListPreview() {
     MyTokioTheme {
         SelectionCardList(
-            selectionList = zonasTematicas,
-            backgroundImage = 0
+            selectionList = monumentos,
+            backgroundImage = R.drawable.fondoclaro
 
         )
     }

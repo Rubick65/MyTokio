@@ -111,14 +111,14 @@
     <string name="templo_descripcion_10" translatable="false">El Santuario Ueno Toshogu es un destacado santuario sintoísta situado en el Parque Ueno de Tokio, construido en 1627 para honrar a Tokugawa Ieyasu, fundador del shogunato Tokugawa. Famoso por su exuberante diseño en pan de oro, la puerta Karamon y tallas detalladas, el complejo sobrevivió a guerras y terremotos, siendo una importante propiedad cultural del periodo Edo.</string>
 
     <!-- ============MONUMENTOS============ -->
-    <string name="monumento_titulo_1" translatable="false">Torre de Tokio (Tokyo Tower)</string>
-    <string name="monumento_titulo_2" translatable="false">Estación de Tokio (Fachada Marunouchi)</string>
+    <string name="monumento_titulo_1" translatable="false">Torre de Tokio</string>
+    <string name="monumento_titulo_2" translatable="false">Estación de Tokio</string>
     <string name="monumento_titulo_3" translatable="false">Edificio de la Dieta Nacional</string>
     <string name="monumento_titulo_4" translatable="false">Tokyo Skytree</string>
-    <string name="monumento_titulo_5" translatable="false">Palacio Imperial (Kokyo)</string>
-    <string name="monumento_titulo_6" translatable="false">Estatua de Hachiko (Cruce de Shibuya)</string>
-    <string name="monumento_titulo_7" translatable="false">Edificio del Gobierno Metropolitano de Tokio</string>
-    <string name="monumento_titulo_8" translatable="false">Estatua de Gundam (Unicorn Gundam)</string>
+    <string name="monumento_titulo_5" translatable="false">Palacio Imperial</string>
+    <string name="monumento_titulo_6" translatable="false">Estatua de Hachiko</string>
+    <string name="monumento_titulo_7" translatable="false">Edificio Metropolitano de Tokio</string>
+    <string name="monumento_titulo_8" translatable="false">Estatua de Gundam</string>
     <string name="monumento_titulo_9" translatable="false">Nakagin Capsule Tower</string>
     <string name="monumento_titulo_10" translatable="false">Teatro Kabuki-za</string>
 
