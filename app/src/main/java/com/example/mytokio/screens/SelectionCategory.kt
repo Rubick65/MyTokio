@@ -2,11 +2,13 @@ package com.example.mytokio.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -25,6 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.mytokio.R
 import com.example.mytokio.data.categorias
 import com.example.mytokio.data.zonasTematicas
 import com.example.mytokio.model.dataObjects.Categoria
@@ -34,6 +37,7 @@ import com.example.mytokio.ui.theme.MyTokioTheme
 fun SelectionCard(
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
+    hasBorder: Boolean,
     categoria: Categoria
 ) {
     Card(
@@ -59,47 +63,76 @@ fun SelectionCard(
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Image(
-                painter = painterResource(categoria.imagen),
-                contentDescription = stringResource(categoria.titulo),
-                contentScale = ContentScale.Crop,
+            Card(
                 modifier = Modifier
                     .size(100.dp)
-                    .padding(10.dp)
+                    .padding(top = 10.dp, bottom = 10.dp, start = 10.dp, end = 5.dp)
                     .weight(0.8f),
-            )
+                shape = RoundedCornerShape(
+                    0.dp
+                ),
+
+                border = if (hasBorder) BorderStroke(width = 2.dp, color = Color.Black) else null
+
+            ) {
+                Image(
+                    painter = painterResource(categoria.imagen),
+                    contentDescription = stringResource(categoria.titulo),
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier,
+                )
+
+            }
+
 
             Text(
                 text = stringResource(categoria.titulo),
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.headlineSmall,
                 textAlign = TextAlign.Start,
-                modifier = Modifier.weight(1.2f),
+                modifier = Modifier
+                    .weight(1.2f),
                 softWrap = true,
                 maxLines = Int.MAX_VALUE,
                 overflow = TextOverflow.Clip
             )
 
+
         }
+
     }
 }
+
 
 @Composable
 fun SelectionCardList(
     modifier: Modifier = Modifier,
+    backgroundImage: Int,
     selectionList: List<Categoria>
 ) {
-    LazyColumn(modifier = modifier.fillMaxSize()) {
 
-        items(items = selectionList) { item ->
+    Box(modifier = modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(backgroundImage),
+            contentDescription = null, //Quitamos descripcíon de audio.
+            contentScale = ContentScale.Crop, //Para que ocupe toda la pantalla
+            modifier = Modifier.fillMaxSize()
+        )
 
-            SelectionCard(
-                onClick = {},
-                categoria = item
-            )
+        LazyColumn(modifier = modifier.fillMaxSize()) {
+
+            items(items = selectionList) { item ->
+
+                SelectionCard(
+                    onClick = {},
+                    categoria = item,
+                    hasBorder = true
+                )
+
+            }
 
         }
-
     }
+
 
 }
 
@@ -110,7 +143,8 @@ fun SelectionCardPreview() {
         SelectionCard(
             onClick = {},
             modifier = Modifier.fillMaxWidth(),
-            categoria = zonasTematicas[2]
+            categoria = zonasTematicas[2],
+            hasBorder = true
         )
     }
 }
@@ -120,7 +154,8 @@ fun SelectionCardPreview() {
 fun SelectionListPreview() {
     MyTokioTheme {
         SelectionCardList(
-            selectionList = categorias
+            selectionList = zonasTematicas,
+            backgroundImage = 0
 
         )
     }
