@@ -1,6 +1,5 @@
 package com.example.mytokio.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -12,15 +11,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80, //Color de fondo de cards
-    secondary = PurpleGrey80, //Color de letras
-    tertiary = Pink80 //Borde de cards
+    primary = cards_claro, //Color de fondo de cards
+    secondary = letras_claro, //Color de letras
+    tertiary = bordes_claro //Borde de cards
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40, //Color de fondo de cards
-    secondary = PurpleGrey40, //Color de letras
-    tertiary = Pink40 //Borde de cards
+    primary = cards_oscuro, //Color de fondo de cards
+    secondary = letras_oscuro, //Color de letras
+    tertiary = bordes_oscuro //Borde de cards
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
