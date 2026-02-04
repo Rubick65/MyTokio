@@ -196,6 +196,7 @@
     <string name="url_gundam" translatable="false">Estatua de Gundam (Unicorn Gundam), Tokyo</string>
     <string name="url_nakagin" translatable="false">Nakagin Capsule Tower, Tokyo</string>
     <string name="url_teatro" translatable="false">Teatro Kabuki-za, Tokyo</string>
+    <string name="enlace_maps" translatable="false">com.google.android.apps.maps</string>
 
 
 </resources>
