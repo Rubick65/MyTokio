@@ -75,6 +75,6 @@ val monumentos = listOf(
     Recomendacion(7,R.drawable.tokiometropolitan_monument,R.string.monumento_titulo_7,R.string.url_gobierno,R.string.monumento_descripcion_7),
     Recomendacion(8,R.drawable.tokiogundam_monument,R.string.monumento_titulo_8,R.string.url_gundam,R.string.monumento_descripcion_8),
     Recomendacion(9,R.drawable.tokionakagincapsuletower_monument,R.string.monumento_titulo_9,R.string.url_nakagin,R.string.monumento_descripcion_9),
-    Recomendacion(10,R.drawable.tokiokabuki_monument,R.string.monumento_titulo_10,R.string.url_teatro,R.string.monumento_descripcion_10),
+    Recomendacion(10,R.drawable.tokiodiet_monument,R.string.monumento_titulo_10,R.string.url_teatro,R.string.monumento_descripcion_10),
     )
 
