@@ -48,6 +48,8 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.ui)
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.10.0")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -32,7 +32,7 @@ fun ButtonMap(
             //Intent para ejecutar el uri
             val maps = Intent(Intent.ACTION_VIEW,uri).apply {
                 //Se especifica que se abra en google maps
-                setPackage(context.getString(R.string.enlace_maps))
+//                setPackage(context.getString(R.string.enlace_maps))
             }
             try {
                 //Se intenta abrir en google maps
