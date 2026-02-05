@@ -1,202 +1,195 @@
 <resources>
 
     <!-- ============PANTALLAS============ -->
-    <string name="categoria_nombre" translatable="false">Categoria</string>
-    <string name="recomendacion_nombre" translatable="false">Recomendaciones</string>
-
+    <string name="categoria_nombre">Categoria</string>
+    <string name="recomendacion_nombre">Recomendaciones</string>
 
     <!-- ============FLECHA============ -->
-    <string name="flecha_atras" translatable="false">Flecha para ir hacia atras</string>
+    <string name="flecha_atras">Flecha para ir hacia atras</string>
 
+    <string name="app_name">MyTokio</string>
 
-    <string name="app_name" translatable="false">MyTokio</string>
     <!-- ============CATEGORIAS============ -->
-    <string name="categoria_1" translatable="false">Zonas tematicas</string>
-    <string name="categoria_2" translatable="false">Cafeterias/Restaurantes</string>
-    <string name="categoria_3" translatable="false">Parques</string>
-    <string name="categoria_4" translatable="false">Templos</string>
-    <string name="categoria_5" translatable="false">Monumentos</string>
+    <string name="categoria_1">Zonas tematicas</string>
+    <string name="categoria_2">Cafeterias/Restaurantes</string>
+    <string name="categoria_3">Parques</string>
+    <string name="categoria_4">Templos</string>
+    <string name="categoria_5">Monumentos</string>
 
     <!-- ============ZONAS TEMATICAS============ -->
+    <string name="zona_tematica_titulo_1">Tokyo Joypolis</string>
+    <string name="zona_tematica_titulo_2">Tokyo Dome City Attractions</string>
+    <string name="zona_tematica_titulo_3">Asakusa Hanayashiki</string>
+    <string name="zona_tematica_titulo_4">Arakawa Amusement Park</string>
+    <string name="zona_tematica_titulo_5">Sanrio Puroland</string>
+    <string name="zona_tematica_titulo_6">Namco Namja Town</string>
+    <string name="zona_tematica_titulo_7">Small worlds tokyo</string>
+    <string name="zona_tematica_titulo_8">TeamLab Planets</string>
+    <string name="zona_tematica_titulo_9">Tokyo One Piece Tower</string>
+    <string name="zona_tematica_titulo_10">The JOJO world</string>
 
-    <string name="zona_tematica_titulo_1" translatable="false">Tokyo Joypolis</string>
-    <string name="zona_tematica_titulo_2" translatable="false">Tokyo Dome City Attractions</string>
-    <string name="zona_tematica_titulo_3" translatable="false">Asakusa Hanayashiki</string>
-    <string name="zona_tematica_titulo_4" translatable="false">Arakawa Amusement Park</string>
-    <string name="zona_tematica_titulo_5" translatable="false">Sanrio Puroland</string>
-    <string name="zona_tematica_titulo_6" translatable="false">Namco Namja Town</string>
-    <string name="zona_tematica_titulo_7" translatable="false">Small worlds tokyo</string>
-    <string name="zona_tematica_titulo_8" translatable="false">TeamLab Planets</string>
-    <string name="zona_tematica_titulo_9" translatable="false">Tokyo One Piece Tower</string>
-    <string name="zona_tematica_titulo_10" translatable="false">The JOJO world</string>
-
-    <string name="zona_tematica_descripcion_1" translatable="false">Parque de atracciones interior operado por SEGA en Odaiba. Tiene múltiples juegos tecnológicos, experiencias VR, simuladores y atracciones interactivas basadas en franquicias de videojuegos y anime. Es ideal para días de lluvia o fans de entretenimiento digital.</string>
-    <string name="zona_tematica_descripcion_2" translatable="false">Área de ocio dentro del complejo Tokyo Dome City que incluye montañas rusas, noria, juegos mecánicos y atracciones familiares. También forma parte de un centro más amplio con tiendas y entretenimiento.</string>
-    <string name="zona_tematica_descripcion_3" translatable="false">El parque de atracciones más antiguo de Japón, con ambiente retro y más de 20 atracciones, desde montañas rusas clásicas hasta juegos clásicos tipo feria.</string>
-    <string name="zona_tematica_descripcion_4" translatable="false">Parque de diversiones clásico y familiar junto al río Sumida con carruseles, mini montaña rusa, noria pequeña y juegos tradicionales. Es muy apto para familias con niños pequeños y combina entretenimiento con un ambiente tranquilo.</string>
-    <string name="zona_tematica_descripcion_5" translatable="false">Parque temático indoor dedicado a personajes de Sanrio (Hello Kitty, My Melody, Gudetama, etc.). Ofrece espectáculos, atracciones suaves, tiendas de merch y restaurantes dentro del parque con ambiente adorable.</string>
-    <string name="zona_tematica_descripcion_6" translatable="false">Parque temático interior en Sunshine City, Ikebukuro, con zonas de juego, comida temática (incluyendo un estadio de gyozas japonesas) y atracciones suaves. Es ideal para familias y amantes de experiencias culinarias divertidas.</string>
-    <string name="zona_tematica_descripcion_7" translatable="false">Parque de miniaturas gigantes con mundos detallados de diferentes temáticas (anime, cultura pop). Es más una galería interactiva a escala gigante que un parque de atracciones tradicional, pero ofrece una experiencia temática muy inmersiva para fans de miniaturas y cultura japonesa.</string>
-    <string name="zona_tematica_descripcion_8" translatable="false">Experiencia artística inmersiva en Toyosu donde caminas entre instalaciones de arte digital y luz interactiva que reaccionan al movimiento y presencia de las personas. Aunque es arte más que un parque temático clásico, se vive como una aventura sensorial única. </string>
-    <string name="zona_tematica_descripcion_9" translatable="false">Antiguamente fue un parque temático indoor dentro de Tokyo Tower basado en One Piece, con juegos, shows y zonas interactivas basadas en la serie.</string>
-    <string name="zona_tematica_descripcion_10" translatable="false">Espacio temático interactivo dedicado al popular anime y manga JoJo’s Bizarre Adventure.</string>
+    <string name="zona_tematica_descripcion_1">Parque de atracciones interior operado por SEGA en Odaiba. Tiene múltiples juegos tecnológicos, experiencias VR, simuladores y atracciones interactivas basadas en franquicias de videojuegos y anime. Es ideal para días de lluvia o fans de entretenimiento digital.</string>
+    <string name="zona_tematica_descripcion_2">Área de ocio dentro del complejo Tokyo Dome City que incluye montañas rusas, noria, juegos mecánicos y atracciones familiares. También forma parte de un centro más amplio con tiendas y entretenimiento.</string>
+    <string name="zona_tematica_descripcion_3">El parque de atracciones más antiguo de Japón, con ambiente retro y más de 20 atracciones, desde montañas rusas clásicas hasta juegos clásicos tipo feria.</string>
+    <string name="zona_tematica_descripcion_4">Parque de diversiones clásico y familiar junto al río Sumida con carruseles, mini montaña rusa, noria pequeña y juegos tradicionales. Es muy apto para familias con niños pequeños y combina entretenimiento con un ambiente tranquilo.</string>
+    <string name="zona_tematica_descripcion_5">Parque temático indoor dedicado a personajes de Sanrio (Hello Kitty, My Melody, Gudetama, etc.). Ofrece espectáculos, atracciones suaves, tiendas de merch y restaurantes dentro del parque con ambiente adorable.</string>
+    <string name="zona_tematica_descripcion_6">Parque temático interior en Sunshine City, Ikebukuro, con zonas de juego, comida temática (incluyendo un estadio de gyozas japonesas) y atracciones suaves. Es ideal para familias y amantes de experiencias culinarias divertidas.</string>
+    <string name="zona_tematica_descripcion_7">Parque de miniaturas gigantes con mundos detallados de diferentes temáticas (anime, cultura pop). Es más una galería interactiva a escala gigante que un parque de atracciones tradicional, pero ofrece una experiencia temática muy inmersiva para fans de miniaturas y cultura japonesa.</string>
+    <string name="zona_tematica_descripcion_8">Experiencia artística inmersiva en Toyosu donde caminas entre instalaciones de arte digital y luz interactiva que reaccionan al movimiento y presencia de las personas. Aunque es arte más que un parque temático clásico, se vive como una aventura sensorial única. </string>
+    <string name="zona_tematica_descripcion_9">Antiguamente fue un parque temático indoor dentro de Tokyo Tower basado en One Piece, con juegos, shows y zonas interactivas basadas en la serie.</string>
+    <string name="zona_tematica_descripcion_10">Espacio temático interactivo dedicado al popular anime y manga JoJo’s Bizarre Adventure.</string>
 
     <!-- ============CAFETERIAS============ -->
-    <string name="cafeteria_titulo_1" translatable="false">Pokémon Café Tokyo</string>
-    <string name="cafeteria_titulo_2" translatable="false">Awakening Cafe</string>
-    <string name="cafeteria_titulo_3" translatable="false">cafe and DINE in "nope"</string>
-    <string name="cafeteria_titulo_4" translatable="false">Tokyo Toy Cafe</string>
-    <string name="cafeteria_titulo_5" translatable="false">Harry Potter Cafe</string>
-    <string name="cafeteria_titulo_6" translatable="false">Ninja Tokyo</string>
-    <string name="cafeteria_titulo_7" translatable="false">FabCafe Tokyo</string>
-    <string name="cafeteria_titulo_8" translatable="false">Alice in Fantasy Book</string>
-    <string name="cafeteria_titulo_9" translatable="false">Sukiyabashi Jiro</string>
-    <string name="cafeteria_titulo_10" translatable="false">Tofuya Ukai</string>
+    <string name="cafeteria_titulo_1">Pokémon Café Tokyo</string>
+    <string name="cafeteria_titulo_2">Awakening Cafe</string>
+    <string name="cafeteria_titulo_3">cafe and DINE in "nope"</string>
+    <string name="cafeteria_titulo_4">Tokyo Toy Cafe</string>
+    <string name="cafeteria_titulo_5">Harry Potter Cafe</string>
+    <string name="cafeteria_titulo_6">Ninja Tokyo</string>
+    <string name="cafeteria_titulo_7">FabCafe Tokyo</string>
+    <string name="cafeteria_titulo_8">Alice in Fantasy Book</string>
+    <string name="cafeteria_titulo_9">Sukiyabashi Jiro</string>
+    <string name="cafeteria_titulo_10">Tofuya Ukai</string>
 
-    <string name="cafeteria_descripcion_1" translatable="false">Café temático oficial inspirado en Pokémon, con platos y bebidas decorados con personajes de la saga. El menú cambia según temporada y a menudo incluye platos especiales, además de merchandising exclusivo para comprar. Es necesario reservar con antelación por su popularidad.</string>
-    <string name="cafeteria_descripcion_2" translatable="false">Café con temática de supervivencia estilo escape room, donde los pedidos y la ambientación te hacen sentir parte de una historia. El restaurante mezcla comida con acertijos y misiones para resolver durante la experiencia.</string>
-    <string name="cafeteria_descripcion_3" translatable="false">Espacio moderno y temático que combina platos creativos con decoración contemporánea y elementos sorpresa. Es popular entre los amantes de lugares con diseño único y original.</string>
-    <string name="cafeteria_descripcion_4" translatable="false">Café donde puedes disfrutar de bebidas y postres mientras estás rodeado de juguetes coleccionables y decoración. Ideal para fotos y ambiente relajado.</string>
-    <string name="cafeteria_descripcion_5" translatable="false">Café temático basado en el mundo de Harry Potter donde cada plato y bebida tiene elementos inspirados en la saga.</string>
-    <string name="cafeteria_descripcion_6" translatable="false">Restaurante temático que recrea una aldea ninja tradicional del Japón feudal, con decoraciones tipo Edo y personal vestido como ninjas que sirven y realizan pequeños trucos. </string>
-    <string name="cafeteria_descripcion_7" translatable="false">Café que combina comidas típicas de café con actividades creativas como talleres de impresión láser o diseño.</string>
-    <string name="cafeteria_descripcion_8" translatable="false">Café temático inspirado en Alicia en el País de las Maravillas. La decoración, los menús y las presentaciones están inspiradas en el cuento, con platos y bebidas que parecen sacados del libro.</string>
-    <string name="cafeteria_descripcion_9" translatable="false">Restaurante de sushi de renombre mundial, conocido por su sushi tradicional extremadamente refinado. Es famoso entre los amantes del sushi por su calidad excepcional.</string>
-    <string name="cafeteria_descripcion_10" translatable="false">Restaurante tradicional japonés cerca de Tokyo Tower, especializado en preparaciones de tofu y cocina kaiseki japonesa. Ofrece una experiencia gastronómica típica japonesa en un ambiente elegante con jardín.</string>
+    <string name="cafeteria_descripcion_1">Café temático oficial inspirado en Pokémon, con platos y bebidas decorados con personajes de la saga. El menú cambia según temporada y a menudo incluye platos especiales, además de merchandising exclusivo para comprar. Es necesario reservar con antelación por su popularidad.</string>
+    <string name="cafeteria_descripcion_2">Café con temática de supervivencia estilo escape room, donde los pedidos y la ambientación te hacen sentir parte de una historia. El restaurante mezcla comida con acertijos y misiones para resolver durante la experiencia.</string>
+    <string name="cafeteria_descripcion_3">Espacio moderno y temático que combina platos creativos con decoración contemporánea y elementos sorpresa. Es popular entre los amantes de lugares con diseño único y original.</string>
+    <string name="cafeteria_descripcion_4">Café donde puedes disfrutar de bebidas y postres mientras estás rodeado de juguetes coleccionables y decoración. Ideal para fotos y ambiente relajado.</string>
+    <string name="cafeteria_descripcion_5">Café temático basado en el mundo de Harry Potter donde cada plato y bebida tiene elementos inspirados en la saga.</string>
+    <string name="cafeteria_descripcion_6">Restaurante temático que recrea una aldea ninja tradicional del Japón feudal, con decoraciones tipo Edo y personal vestido como ninjas que sirven y realizan pequeños trucos. </string>
+    <string name="cafeteria_descripcion_7">Café que combina comidas típicas de café con actividades creativas como talleres de impresión láser o diseño.</string>
+    <string name="cafeteria_descripcion_8">Café temático inspirado en Alicia en el País de las Maravillas. La decoración, los menús y las presentaciones están inspiradas en el cuento, con platos y bebidas que parecen sacados del libro.</string>
+    <string name="cafeteria_descripcion_9">Restaurante de sushi de renombre mundial, conocido por su sushi tradicional extremadamente refinado. Es famoso entre los amantes del sushi por su calidad excepcional.</string>
+    <string name="cafeteria_descripcion_10">Restaurante tradicional japonés cerca de Tokyo Tower, especializado en preparaciones de tofu y cocina kaiseki japonesa. Ofrece una experiencia gastronómica típica japonesa en un ambiente elegante con jardín.</string>
 
     <!-- ============PARQUES============ -->
-    <string name="parque_titulo_1" translatable="false">Shinjuku Gyoen National Garden</string>
-    <string name="parque_titulo_2" translatable="false">Yoyogi Park</string>
-    <string name="parque_titulo_3" translatable="false">Ueno Park</string>
-    <string name="parque_titulo_4" translatable="false">Kasai Rinkai Park</string>
-    <string name="parque_titulo_5" translatable="false">Shakujii Park</string>
-    <string name="parque_titulo_6" translatable="false">Shiba Park</string>
-    <string name="parque_titulo_7" translatable="false">Shinagawa Kumin Park</string>
-    <string name="parque_titulo_8" translatable="false">Akatsuka Park</string>
-    <string name="parque_titulo_9" translatable="false">Arakawa Nature Park</string>
-    <string name="parque_titulo_10" translatable="false">Egota-no-Mori Park</string>
+    <string name="parque_titulo_1">Shinjuku Gyoen National Garden</string>
+    <string name="parque_titulo_2">Yoyogi Park</string>
+    <string name="parque_titulo_3">Ueno Park</string>
+    <string name="parque_titulo_4">Kasai Rinkai Park</string>
+    <string name="parque_titulo_5">Shakujii Park</string>
+    <string name="parque_titulo_6">Shiba Park</string>
+    <string name="parque_titulo_7">Shinagawa Kumin Park</string>
+    <string name="parque_titulo_8">Akatsuka Park</string>
+    <string name="parque_titulo_9">Arakawa Nature Park</string>
+    <string name="parque_titulo_10">Egota-no-Mori Park</string>
 
-    <string name="parque_descripcion_1" translatable="false">Un enorme parque-jardín con estilo japonés, inglés y francés, famoso por sus cerezos en flor en primavera y amplios senderos tranquilos en el centro de Tokio.</string>
-    <string name="parque_descripcion_2" translatable="false">Un parque urbano muy popular junto a Harajuku que combina zonas abiertas, bosquecillos, espacios para picnic y actividades al aire libre.</string>
-    <string name="parque_descripcion_3" translatable="false">Un clásico de Tokio: combina naturaleza con cultura. Aquí encontrarás museos, templos, un zoológico y estanques —especialmente bonito durante el hanami (cerezos en flor).</string>
-    <string name="parque_descripcion_4" translatable="false">Un parque enorme junto a la bahía con un santuario de aves, playa artificial y la famosa gran noria “Diamond and Flower Ferris Wheel”, perfecta para vistas panorámicas.</string>
-    <string name="parque_descripcion_5" translatable="false">Espacio natural con dos estanques grandes, perfectos para pasear o hacer observación de aves, y ruinas históricas alrededor del estanque.</string>
-    <string name="parque_descripcion_6" translatable="false">El parque público más antiguo de Japón, situado junto a la Torre de Tokio y el templo Zojoji; combina historia con zonas verdes relajantes.</string>
-    <string name="parque_descripcion_7" translatable="false">Un parque menos conocido pero precioso, con un lago de agua salada, muchos árboles y espacios tranquilos para pasear, ideal para familias.</string>
-    <string name="parque_descripcion_8" translatable="false">Espacio amplio con restos del castillo de Akatsuka, zonas deportivas y áreas con naturaleza variada, haciéndolo ideal para actividades al aire libre.</string>
-    <string name="parque_descripcion_9" translatable="false">Un parque de barrio con áreas de juego para niños, pista de bicicletas, lagos y jardines, perfecto para familias o un paseo relajado.</string>
-    <string name="parque_descripcion_10" translatable="false">Gran parque urbano con zonas de juegos, espacio abierto, estanque y senderos; muy popular entre residentes por sus amplias áreas verdes.</string>
+    <string name="parque_descripcion_1">Un enorme parque-jardín con estilo japonés, inglés y francés, famoso por sus cerezos en flor en primavera y amplios senderos tranquilos en el centro de Tokio.</string>
+    <string name="parque_descripcion_2">Un parque urbano muy popular junto a Harajuku que combina zonas abiertas, bosquecillos, espacios para picnic y actividades al aire libre.</string>
+    <string name="parque_descripcion_3">Un clásico de Tokio: combina naturaleza con cultura. Aquí encontrarás museos, templos, un zoológico y estanques —especialmente bonito durante el hanami (cerezos en flor).</string>
+    <string name="parque_descripcion_4">Un parque enorme junto a la bahía con un santuario de aves, playa artificial y la famosa gran noria “Diamond and Flower Ferris Wheel”, perfecta para vistas panorámicas.</string>
+    <string name="parque_descripcion_5">Espacio natural con dos estanques grandes, perfectos para pasear o hacer observación de aves, y ruinas históricas alrededor del estanque.</string>
+    <string name="parque_descripcion_6">El parque público más antiguo de Japón, situado junto a la Torre de Tokio y el templo Zojoji; combina historia con zonas verdes relajantes.</string>
+    <string name="parque_descripcion_7">Un parque menos conocido pero precioso, con un lago de agua salada, muchos árboles y espacios tranquilos para pasear, ideal para familias.</string>
+    <string name="parque_descripcion_8">Espacio amplio con restos del castillo de Akatsuka, zonas deportivas y áreas con naturaleza variada, haciéndolo ideal para actividades al aire libre.</string>
+    <string name="parque_descripcion_9">Un parque de barrio con áreas de juego para niños, pista de bicicletas, lagos y jardines, perfecto para familias o un paseo relajado.</string>
+    <string name="parque_descripcion_10">Gran parque urbano con zonas de juegos, espacio abierto, estanque y senderos; muy popular entre residentes por sus amplias áreas verdes.</string>
 
     <!-- ============TEMPLOS============ -->
-    <string name="templo_titulo_1" translatable="false">Santuario Hie</string>
-    <string name="templo_titulo_2" translatable="false">Santuario Meiji</string>
-    <string name="templo_titulo_3" translatable="false">Templo Kaneiji</string>
-    <string name="templo_titulo_4" translatable="false">Templo Sensoji</string>
-    <string name="templo_titulo_5" translatable="false">Templo Zojoji</string>
-    <string name="templo_titulo_6" translatable="false">Templo Gotokuji</string>
-    <string name="templo_titulo_7" translatable="false">Santuario Yasukuni</string>
-    <string name="templo_titulo_8" translatable="false">Templo Tennoji</string>
-    <string name="templo_titulo_9" translatable="false">Santuario Tomioka Hachiman-gū</string>
-    <string name="templo_titulo_10" translatable="false">Santuario Ueno Toshogu</string>
+    <string name="templo_titulo_1">Santuario Hie</string>
+    <string name="templo_titulo_2">Santuario Meiji</string>
+    <string name="templo_titulo_3">Templo Kaneiji</string>
+    <string name="templo_titulo_4">Templo Sensoji</string>
+    <string name="templo_titulo_5">Templo Zojoji</string>
+    <string name="templo_titulo_6">Templo Gotokuji</string>
+    <string name="templo_titulo_7">Santuario Yasukuni</string>
+    <string name="templo_titulo_8">Templo Tennoji</string>
+    <string name="templo_titulo_9">Santuario Tomioka Hachiman-gū</string>
+    <string name="templo_titulo_10">Santuario Ueno Toshogu</string>
 
-    <string name="templo_descripcion_1" translatable="false">El Santuario Hie (Hie-jinja) en Chiyoda, Tokio, es un importante santuario sintoísta histórico, antiguo protector del shogunato Tokugawa. Famoso por su festival Sanno Matsuri y un túnel de torii rojos, es un tranquilo oasis en la colina de Akasaka, conocido por sus estatuas de monos mensajeros y bendiciones para negocios.</string>
-    <string name="templo_descripcion_2" translatable="false">El Santuario Meiji (Meiji Jingu), situado en Shibuya, Tokio, es un emblemático santuario sintoísta fundado en 1920 en honor al Emperador Meiji y la Emperatriz Shoken. Rodeado por un denso bosque de 70 hectáreas y 120,000 árboles, ofrece un refugio natural y solemne en el centro de la bulliciosa ciudad.</string>
-    <string name="templo_descripcion_3" translatable="false">El Templo Kaneiji es un destacado recinto budista de la secta Tendai, construido en 1625 en el Parque Ueno de Tokio con el apoyo del shogunato Tokugawa. Famoso por albergar la tumba de seis de los quince shogunes, destaca por su pagoda de cinco pisos, arquitectura tradicional de la época Edo y su histórica relevancia en la batalla de Ueno.</string>
-    <string name="templo_descripcion_4" translatable="false">El Templo Senso-ji, ubicado en Asakusa, es el templo budista más antiguo y emblemático de Tokio, fundado en el año 628 d.C. y dedicado a la diosa Kannon. Destaca por su icónica puerta roja Kaminarimon con su gran linterna, la vibrante calle comercial Nakamise-dōri, una imponente pagoda de cinco pisos y la sala principal Hondo, ofreciendo una inmersión en la cultura tradicional.</string>
-    <string name="templo_descripcion_5" translatable="false">El Templo Zojoji, situado en el barrio de Minato en Tokio junto al Parque Shiba y la Torre de Tokio, es un destacado centro budista de la escuela Jodo, establecido en 1393 y trasladado a su ubicación actual en 1598 por el shogun Tokugawa Ieyasu. Es reconocido como el templo familiar del clan Tokugawa, albergando las tumbas de seis shogunes en su mausoleo.</string>
-    <string name="templo_descripcion_6" translatable="false">El Templo Gōtokuji, ubicado en el barrio de Setagaya en Tokio, es un tranquilo templo budista del periodo Edo famoso por ser el lugar de origen de la leyenda del Maneki Neko (gato de la suerte). El recinto alberga miles de figuras blancas de gatos con la pata derecha levantada, que los visitantes dejan como ofrenda al pedir deseos o agradecer su cumplimiento.</string>
-    <string name="templo_descripcion_7" translatable="false">El Santuario Yasukuni en Chiyoda, Tokio, es un importante santuario sintoísta fundado en 1869 por orden del Emperador Meiji para honrar a los caídos en las guerras de Japón (desde la Restauración Meiji hasta la Segunda Guerra Mundial). Con más de 2.4 millones de espíritus consagrados, es un lugar de gran valor histórico, pero genera controversia internacional al incluir a criminales de guerra de la Segunda Guerra Mundial.</string>
-    <string name="templo_descripcion_8" translatable="false">El templo Tennoji es un venerable santuario budista situado en el pintoresco distrito de Yanaka, en Tokio. Fundado en 1274, es el templo más antiguo de la zona, y ofrece a los visitantes una visión del rico patrimonio religioso de Japón. </string>
-    <string name="templo_descripcion_9" translatable="false">El Santuario Tomioka Hachimangu, fundado en 1627 en Tokio (barrio de Koto), es el templo Hachiman más grande de la ciudad y el lugar de nacimiento del sumo profesional, donde se celebraron torneos históricos desde 1684. Famoso por su festival Fukagawa, alberga el mikoshi (santuario portátil) dorado más grande de Japón y numerosos monumentos dedicados al sumo.</string>
-    <string name="templo_descripcion_10" translatable="false">El Santuario Ueno Toshogu es un destacado santuario sintoísta situado en el Parque Ueno de Tokio, construido en 1627 para honrar a Tokugawa Ieyasu, fundador del shogunato Tokugawa. Famoso por su exuberante diseño en pan de oro, la puerta Karamon y tallas detalladas, el complejo sobrevivió a guerras y terremotos, siendo una importante propiedad cultural del periodo Edo.</string>
+    <string name="templo_descripcion_1">El Santuario Hie (Hie-jinja) en Chiyoda, Tokio, es un importante santuario sintoísta histórico, antiguo protector del shogunato Tokugawa. Famoso por su festival Sanno Matsuri y un túnel de torii rojos, es un tranquilo oasis en la colina de Akasaka, conocido por sus estatuas de monos mensajeros y bendiciones para negocios.</string>
+    <string name="templo_descripcion_2">El Santuario Meiji (Meiji Jingu), situado en Shibuya, Tokio, es un emblemático santuario sintoísta fundado en 1920 en honor al Emperador Meiji y la Emperatriz Shoken. Rodeado por un denso bosque de 70 hectáreas y 120,000 árboles, ofrece un refugio natural y solemne en el centro de la bulliciosa ciudad.</string>
+    <string name="templo_descripcion_3">El Templo Kaneiji es un destacado recinto budista de la secta Tendai, construido en 1625 en el Parque Ueno de Tokio con el apoyo del shogunato Tokugawa. Famoso por albergar la tumba de seis de los quince shogunes, destaca por su pagoda de cinco pisos, arquitectura tradicional de la época Edo y su histórica relevancia en la batalla de Ueno.</string>
+    <string name="templo_descripcion_4">El Templo Senso-ji, ubicado en Asakusa, es el templo budista más antiguo y emblemático de Tokio, fundado en el año 628 d.C. y dedicado a la diosa Kannon. Destaca por su icónica puerta roja Kaminarimon con su gran linterna, la vibrante calle comercial Nakamise-dōri, una imponente pagoda de cinco pisos y la sala principal Hondo, ofreciendo una inmersión en la cultura tradicional.</string>
+    <string name="templo_descripcion_5">El Templo Zojoji, situado en el barrio de Minato en Tokio junto al Parque Shiba y la Torre de Tokio, es un destacado centro budista de la escuela Jodo, establecido en 1393 y trasladado a su ubicación actual en 1598 por el shogun Tokugawa Ieyasu. Es reconocido como el templo familiar del clan Tokugawa, albergando las tumbas de seis shogunes en su mausoleo.</string>
+    <string name="templo_descripcion_6">El Templo Gōtokuji, ubicado en el barrio de Setagaya en Tokio, es un tranquilo templo budista del periodo Edo famoso por ser el lugar de origen de la leyenda del Maneki Neko (gato de la suerte). El recinto alberga miles de figuras blancas de gatos con la pata derecha levantada, que los visitantes dejan como ofrenda al pedir deseos o agradecer su cumplimiento.</string>
+    <string name="templo_descripcion_7">El Santuario Yasukuni en Chiyoda, Tokio, es un importante santuario sintoísta fundado en 1869 por orden del Emperador Meiji para honrar a los caídos en las guerras de Japón (desde la Restauración Meiji hasta la Segunda Guerra Mundial). Con más de 2.4 millones de espíritus consagrados, es un lugar de gran valor histórico, pero genera controversia internacional al incluir a criminales de guerra de la Segunda Guerra Mundial.</string>
+    <string name="templo_descripcion_8">El templo Tennoji es un venerable santuario budista situado en el pintoresco distrito de Yanaka, en Tokio. Fundado en 1274, es el templo más antiguo de la zona, y ofrece a los visitantes una visión del rico patrimonio religioso de Japón. </string>
+    <string name="templo_descripcion_9">El Santuario Tomioka Hachimangu, fundado en 1627 en Tokio (barrio de Koto), es el templo Hachiman más grande de la ciudad y el lugar de nacimiento del sumo profesional, donde se celebraron torneos históricos desde 1684. Famoso por su festival Fukagawa, alberga el mikoshi (santuario portátil) dorado más grande de Japón y numerosos monumentos dedicados al sumo.</string>
+    <string name="templo_descripcion_10">El Santuario Ueno Toshogu es un destacado santuario sintoísta situado en el Parque Ueno de Tokio, construido en 1627 para honrar a Tokugawa Ieyasu, fundador del shogunato Tokugawa. Famoso por su exuberante diseño en pan de oro, la puerta Karamon y tallas detalladas, el complejo sobrevivió a guerras y terremotos, siendo una importante propiedad cultural del periodo Edo.</string>
 
     <!-- ============MONUMENTOS============ -->
-    <string name="monumento_titulo_1" translatable="false">Torre de Tokio</string>
-    <string name="monumento_titulo_2" translatable="false">Estación de Tokio</string>
-    <string name="monumento_titulo_3" translatable="false">Edificio de la Dieta Nacional</string>
-    <string name="monumento_titulo_4" translatable="false">Tokyo Skytree</string>
-    <string name="monumento_titulo_5" translatable="false">Palacio Imperial</string>
-    <string name="monumento_titulo_6" translatable="false">Estatua de Hachiko</string>
-    <string name="monumento_titulo_7" translatable="false">Edificio Metropolitano de Tokio</string>
-    <string name="monumento_titulo_8" translatable="false">Estatua de Gundam</string>
-    <string name="monumento_titulo_9" translatable="false">Nakagin Capsule Tower</string>
-    <string name="monumento_titulo_10" translatable="false">Teatro Kabuki-za</string>
+    <string name="monumento_titulo_1">Torre de Tokio</string>
+    <string name="monumento_titulo_2">Estación de Tokio</string>
+    <string name="monumento_titulo_3">Edificio de la Dieta Nacional</string>
+    <string name="monumento_titulo_4">Tokyo Skytree</string>
+    <string name="monumento_titulo_5">Palacio Imperial</string>
+    <string name="monumento_titulo_6">Estatua de Hachiko</string>
+    <string name="monumento_titulo_7">Edificio Metropolitano de Tokio</string>
+    <string name="monumento_titulo_8">Estatua de Gundam</string>
+    <string name="monumento_titulo_9">Nakagin Capsule Tower</string>
+    <string name="monumento_titulo_10">Teatro Kabuki-za</string>
 
-    <string name="monumento_descripcion_1" translatable="false">Inspirada en la Torre Eiffel y pintada de blanco y naranja internacional para cumplir con las normas de seguridad aérea, esta torre de comunicaciones de 333 metros es un símbolo del renacimiento de Japón tras la posguerra. Ofrece vistas panorámicas impresionantes de la ciudad.</string>
-    <string name="monumento_descripcion_2" translatable="false">Este magnífico edificio de ladrillo rojo data de 1914. Sobrevivió a los bombardeos de la Segunda Guerra Mundial y ha sido restaurado a su gloria original, representando la apertura de Japón hacia Occidente y la modernidad ferroviaria.</string>
-    <string name="monumento_descripcion_3" translatable="false">Es el centro de la política japonesa donde se reúnen las dos cámaras del parlamento. Terminado en 1936, destaca por su imponente estructura de granito y su torre piramidal central, siendo un símbolo del gobierno del país.</string>
-    <string name="monumento_descripcion_4" translatable="false">Con 634 metros de altura, es la estructura más alta de Japón. Esta torre de radiodifusión funciona como un faro moderno y cuenta con dos observatorios que ofrecen una de las vistas más espectaculares del mundo, alcanzando a ver el Monte Fuji en días despejados.</string>
-    <string name="monumento_descripcion_5" translatable="false">Residencia oficial de la familia imperial japonesa, se encuentra en el antiguo emplazamiento del Castillo de Edo. El puente Nijubashi es su monumento más fotografiado, representando la elegancia y la historia del poder imperial.</string>
-    <string name="monumento_descripcion_6" translatable="false">Situada a la salida de la estación de Shibuya, esta estatua de bronce rinde homenaje al perro más fiel del mundo. Se encuentra junto al famoso cruce de Shibuya, considerado el más transitado del planeta y un monumento vivo a la energía urbana de Tokio.</string>
-    <string name="monumento_descripcion_7" translatable="false">Conocido popularmente como "Tochō", este imponente rascacielos diseñado por Kenzo Tange domina el horizonte de Shinjuku. Sus torres gemelas albergan miradores gratuitos y su diseño recuerda a una catedral gótica moderna.</string>
-    <string name="monumento_descripcion_8" translatable="false">Esta estatua gigante de casi 20 metros de altura en Odaiba es un monumento a la ingeniería y a la animación japonesa. Es capaz de transformarse ligeramente y se ilumina por la noche, atrayendo a miles de visitantes.</string>
-    <string name="monumento_descripcion_9" translatable="false">Aunque recientemente se inició su proceso de desmantelamiento para preservar sus cápsulas de forma individual, este edificio fue el monumento más representativo del Movimiento Metabolista, diseñado para ser una estructura orgánica y modular que pudiera crecer.</string>
-    <string name="monumento_descripcion_10" translatable="false">Situado en Ginza, es el principal teatro de Tokio para el drama tradicional Kabuki. Su arquitectura actual combina el estilo tradicional japonés con instalaciones modernas, siendo un monumento vivo a las artes escénicas.</string>
+    <string name="monumento_descripcion_1">Inspirada en la Torre Eiffel y pintada de blanco y naranja internacional para cumplir con las normas de seguridad aérea, esta torre de comunicaciones de 333 metros es un símbolo del renacimiento de Japón tras la posguerra. Ofrece vistas panorámicas impresionantes de la ciudad.</string>
+    <string name="monumento_descripcion_2">Este magnífico edificio de ladrillo rojo data de 1914. Sobrevivió a los bombardeos de la Segunda Guerra Mundial y ha sido restaurado a su gloria original, representando la apertura de Japón hacia Occidente y la modernidad ferroviaria.</string>
+    <string name="monumento_descripcion_3">Es el centro de la política japonesa donde se reúnen las dos cámaras del parlamento. Terminado en 1936, destaca por su imponente estructura de granito y su torre piramidal central, siendo un símbolo del gobierno del país.</string>
+    <string name="monumento_descripcion_4">Con 634 metros de altura, es la estructura más alta de Japón. Esta torre de radiodifusión funciona como un faro moderno y cuenta con dos observatorios que ofrecen una de las vistas más espectaculares del mundo, alcanzando a ver el Monte Fuji en días despejados.</string>
+    <string name="monumento_descripcion_5">Residencia oficial de la familia imperial japonesa, se encuentra en el antiguo emplazamiento del Castillo de Edo. El puente Nijubashi es su monumento más fotografiado, representando la elegancia y la historia del poder imperial.</string>
+    <string name="monumento_descripcion_6">Situada a la salida de la estación de Shibuya, esta estatua de bronce rinde homenaje al perro más fiel del mundo. Se encuentra junto al famoso cruce de Shibuya, considerado el más transitado del planeta y un monumento vivo a la energía urbana de Tokio.</string>
+    <string name="monumento_descripcion_7">Conocido popularmente como "Tochō", este imponente rascacielos diseñado por Kenzo Tange domina el horizonte de Shinjuku. Sus torres gemelas albergan miradores gratuitos y su diseño recuerda a una catedral gótica moderna.</string>
+    <string name="monumento_descripcion_8">Esta estatua gigante de casi 20 metros de altura en Odaiba es un monumento a la ingeniería y a la animación japonesa. Es capaz de transformarse ligeramente y se ilumina por la noche, atrayendo a miles de visitantes.</string>
+    <string name="monumento_descripcion_9">Aunque recientemente se inició su proceso de desmantelamiento para preservar sus cápsulas de forma individual, este edificio fue el monumento más representativo del Movimiento Metabolista, diseñado para ser una estructura orgánica y modular que pudiera crecer.</string>
+    <string name="monumento_descripcion_10">Situado en Ginza, es el principal teatro de Tokio para el drama tradicional Kabuki. Su arquitectura actual combina el estilo tradicional japonés con instalaciones modernas, siendo un monumento vivo a las artes escénicas.</string>
 
     <!-- ============URL ZONAS TEMATICAS============ -->
-    <string name="url_joypolis" translatable="false">Tokyo Joypolis, Tokyo</string>
-    <string name="url_dome" translatable="false">Tokyo Dome City Attractions, Tokyo</string>
-    <string name="url_asakusa" translatable="false">Asakusa Hanayashiki, Tokyo</string>
-    <string name="url_arakawa_zona" translatable="false">Arakawa Amusement Park, Tokyo</string>
-    <string name="url_sanrio" translatable="false">Sanrio Puroland, Tokyo</string>
-    <string name="url_namco" translatable="false">Namco Namja Town, Tokyo</string>
-    <string name="url_small" translatable="false">Small worlds tokyo, Tokyo</string>
-    <string name="url_team_lab" translatable="false">TeamLab Planets, Tokyo</string>
-    <string name="url_one_piece" translatable="false">Tokyo One Piece Tower, Tokyo</string>
-    <string name="url_jojo" translatable="false">The JOJO world, Tokyo</string>
+    <string name="url_joypolis">Tokyo Joypolis, Tokyo</string>
+    <string name="url_dome">Tokyo Dome City Attractions, Tokyo</string>
+    <string name="url_asakusa">Asakusa Hanayashiki, Tokyo</string>
+    <string name="url_arakawa_zona">Arakawa Amusement Park, Tokyo</string>
+    <string name="url_sanrio">Sanrio Puroland, Tokyo</string>
+    <string name="url_namco">Namco Namja Town, Tokyo</string>
+    <string name="url_small">Small worlds tokyo, Tokyo</string>
+    <string name="url_team_lab">TeamLab Planets, Tokyo</string>
+    <string name="url_one_piece">Tokyo One Piece Tower, Tokyo</string>
+    <string name="url_jojo">The JOJO world, Tokyo</string>
 
     <!-- ============URL CAFETERIA============ -->
-
-    <string name="url_pokemon" translatable="false">Pokémon Café Tokyo, Tokyo</string>
-    <string name="url_awakening" translatable="false">Awakening Cafe, Tokyo</string>
-    <string name="url_cafe_and_dnie" translatable="false">cafe and DINE in "nope", Tokyo</string>
-    <string name="url_toy_cafe" translatable="false">Tokyo Toy Cafe, Tokyo</string>
-    <string name="url_harry_potter" translatable="false">Harry Potter Cafe, Tokyo</string>
-    <string name="url_ninja" translatable="false">Ninja Tokyo, Tokyo</string>
-    <string name="url_fab_cafe" translatable="false">FabCafe Tokyo, Tokyo</string>
-    <string name="url_alice" translatable="false">Alice in Fantasy Book, Tokyo</string>
-    <string name="url_sukiyabashi" translatable="false">Sukiyabashi Jiro, Tokyo</string>
-    <string name="url_tofuya" translatable="false">Tofuya Ukai, Tokyo</string>
+    <string name="url_pokemon">Pokémon Café Tokyo, Tokyo</string>
+    <string name="url_awakening">Awakening Cafe, Tokyo</string>
+    <string name="url_cafe_and_dnie">cafe and DINE in "nope", Tokyo</string>
+    <string name="url_toy_cafe">Tokyo Toy Cafe, Tokyo</string>
+    <string name="url_harry_potter">Harry Potter Cafe, Tokyo</string>
+    <string name="url_ninja">Ninja Tokyo, Tokyo</string>
+    <string name="url_fab_cafe">FabCafe Tokyo, Tokyo</string>
+    <string name="url_alice">Alice in Fantasy Book, Tokyo</string>
+    <string name="url_sukiyabashi">Sukiyabashi Jiro, Tokyo</string>
+    <string name="url_tofuya">Tofuya Ukai, Tokyo</string>
 
     <!-- ============URL PARQUES============ -->
-
-    <string name="url_shinjuku" translatable="false">Shinjuku Gyoen National Garden, Tokyo</string>
-    <string name="url_yoyogi" translatable="false">Yoyogi Park, Tokyo</string>
-    <string name="url_ueno" translatable="false">Ueno Park, Tokyo</string>
-    <string name="url_kasai" translatable="false">Kasai Rinkai Park, Tokyo</string>
-    <string name="url_shakujii" translatable="false">Shakujii Park, Tokyo</string>
-    <string name="url_shiba" translatable="false">Shiba Park, Tokyo</string>
-    <string name="url_shinagawa" translatable="false">Shinagawa Kumin Park, Tokyo</string>
-    <string name="url_akatsuka" translatable="false">Akatsuka Park, Tokyo</string>
-    <string name="url_arakawa_parque" translatable="false">Arakawa Nature Park, Tokyo</string>
-    <string name="url_egota" translatable="false">Egota-no-Mori Park, Tokyo</string>
+    <string name="url_shinjuku">Shinjuku Gyoen National Garden, Tokyo</string>
+    <string name="url_yoyogi">Yoyogi Park, Tokyo</string>
+    <string name="url_ueno">Ueno Park, Tokyo</string>
+    <string name="url_kasai">Kasai Rinkai Park, Tokyo</string>
+    <string name="url_shakujii">Shakujii Park, Tokyo</string>
+    <string name="url_shiba">Shiba Park, Tokyo</string>
+    <string name="url_shinagawa">Shinagawa Kumin Park, Tokyo</string>
+    <string name="url_akatsuka">Akatsuka Park, Tokyo</string>
+    <string name="url_arakawa_parque">Arakawa Nature Park, Tokyo</string>
+    <string name="url_egota">Egota-no-Mori Park, Tokyo</string>
 
     <!-- ============URL TEMPLOS============ -->
-
-    <string name="url_hie" translatable="false">Santuario Hie, Tokyo</string>
-    <string name="url_meiji" translatable="false">Santuario Meiji, Tokyo</string>
-    <string name="url_kaneiji" translatable="false">Templo Kaneiji, Tokyo</string>
-    <string name="url_sensoji" translatable="false">Templo Sensoji, Tokyo</string>
-    <string name="url_zojoji" translatable="false">Templo Zojoji, Tokyo</string>
-    <string name="url_gotokuji" translatable="false">Templo Gotokuji, Tokyo</string>
-    <string name="url_yasukuni" translatable="false">Santuario Yasukuni, Tokyo</string>
-    <string name="url_tennoji" translatable="false">Templo Tennoji, Tokyo</string>
-    <string name="url_hachiman" translatable="false">Santuario Tomioka Hachiman-gū, Tokyo</string>
-    <string name="url_toshogu" translatable="false">Santuario Ueno Toshogu, Tokyo</string>
+    <string name="url_hie">Santuario Hie, Tokyo</string>
+    <string name="url_meiji">Santuario Meiji, Tokyo</string>
+    <string name="url_kaneiji">Templo Kaneiji, Tokyo</string>
+    <string name="url_sensoji">Templo Sensoji, Tokyo</string>
+    <string name="url_zojoji">Templo Zojoji, Tokyo</string>
+    <string name="url_gotokuji">Templo Gotokuji, Tokyo</string>
+    <string name="url_yasukuni">Santuario Yasukuni, Tokyo</string>
+    <string name="url_tennoji">Templo Tennoji, Tokyo</string>
+    <string name="url_hachiman">Santuario Tomioka Hachiman-gū, Tokyo</string>
+    <string name="url_toshogu">Santuario Ueno Toshogu, Tokyo</string>
 
     <!-- ============URL MONUMENTOS============ -->
-
-    <string name="url_torre" translatable="false">Torre de Tokio (Tokyo Tower), Tokyo</string>
-    <string name="url_estacion" translatable="false">Estación de Tokio (Fachada Marunouchi), Tokyo</string>
-    <string name="url_dieta" translatable="false">Edificio de la Dieta Nacional, Tokyo</string>
-    <string name="url_skytree" translatable="false">Tokyo Skytree, Tokyo</string>
-    <string name="url_palacio" translatable="false">Palacio Imperial (Kokyo), Tokyo</string>
-    <string name="url_hachiko" translatable="false">Estatua de Hachiko (Cruce de Shibuya), Tokyo</string>
-    <string name="url_gobierno" translatable="false">Edificio del Gobierno Metropolitano de Tokio, Tokyo</string>
-    <string name="url_gundam" translatable="false">Estatua de Gundam (Unicorn Gundam), Tokyo</string>
-    <string name="url_nakagin" translatable="false">Nakagin Capsule Tower, Tokyo</string>
-    <string name="url_teatro" translatable="false">Teatro Kabuki-za, Tokyo</string>
-    <string name="enlace_maps" translatable="false">com.google.android.apps.maps</string>
-
+    <string name="url_torre">Torre de Tokio (Tokyo Tower), Tokyo</string>
+    <string name="url_estacion">Estación de Tokio (Fachada Marunouchi), Tokyo</string>
+    <string name="url_dieta">Edificio de la Dieta Nacional, Tokyo</string>
+    <string name="url_skytree">Tokyo Skytree, Tokyo</string>
+    <string name="url_palacio">Palacio Imperial (Kokyo), Tokyo</string>
+    <string name="url_hachiko">Estatua de Hachiko (Cruce de Shibuya), Tokyo</string>
+    <string name="url_gobierno">Edificio del Gobierno Metropolitano de Tokio, Tokyo</string>
+    <string name="url_gundam">Estatua de Gundam (Unicorn Gundam), Tokyo</string>
+    <string name="url_nakagin">Nakagin Capsule Tower, Tokyo</string>
+    <string name="url_teatro">Teatro Kabuki-za, Tokyo</string>
+    <string name="enlace_maps">com.google.android.apps.maps</string>
 
 </resources>
