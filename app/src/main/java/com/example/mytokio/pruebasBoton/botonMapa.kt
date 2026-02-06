@@ -30,6 +30,12 @@ fun MapButton(
     //formato para abrir google maps
     val uri = "geo:0,0?q=${Uri.encode(url)}".toUri()
 
+    //Formato para abrir en navegador
+    val navegadorUri = "https://www.google.com/maps/search/?api=1&query=${Uri.encode(url)}".toUri()
+
+    //Intent para abrir en el navegador en caso de fallo
+    val navegadorIntent = Intent(Intent.ACTION_VIEW,navegadorUri)
+
     IconButton(
         onClick = {
             //Intent para ejecutar el uri
@@ -43,8 +49,6 @@ fun MapButton(
             }
             catch(e: ActivityNotFoundException) {
                 //En caso de dar error, se ejecutara en el navegador por defecto
-                val navegadorUri = "https://www.google.com/maps/search/?api=1&query=${Uri.encode(url)}".toUri()
-                val navegadorIntent = Intent(Intent.ACTION_VIEW,navegadorUri)
                 context.startActivity(navegadorIntent)
             }
         },
