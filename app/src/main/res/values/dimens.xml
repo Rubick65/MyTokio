@@ -25,6 +25,9 @@
     <!-- ============CARD BORDER============ -->
     <dimen name="card_border_width">4dp</dimen>
 
+    <!-- ============ICON SIZE============ -->
+    <dimen name="icon_size">40dp</dimen>
+
 
     <!-- ============IMAGE CARD SIZE============ -->
     <dimen name="image_card_height">100dp</dimen>

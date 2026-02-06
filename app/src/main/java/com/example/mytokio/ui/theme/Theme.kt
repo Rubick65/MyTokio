@@ -11,15 +11,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = cards_claro, //Color de fondo de cards
-    secondary = letras_claro, //Color de letras
-    tertiary = bordes_claro //Borde de cards
+    primary = CARDS_OSCURO, //Color de fondo de cards
+    secondary = LETRAS_OSCURO, //Color de letras
+    tertiary = BORDES_OSCURO //Borde de cards
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = cards_oscuro, //Color de fondo de cards
-    secondary = letras_oscuro, //Color de letras
-    tertiary = bordes_oscuro //Borde de cards
+    primary = CARDS_CLARO, //Color de fondo de cards
+    secondary = LETRAS_CLARO, //Color de letras
+    tertiary = BORDES_CLARO //Borde de cards
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
