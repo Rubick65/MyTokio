@@ -20,7 +20,7 @@
     <dimen name="category_card_top_padding">1dp</dimen>
 
     <!-- ============CARD SHAPE============ -->
-    <dimen name="top_bottom_end">50dp</dimen>
+    <dimen name="top_bottom_end">100dp</dimen>
 
     <!-- ============CARD BORDER============ -->
     <dimen name="card_border_width">4dp</dimen>
@@ -34,10 +34,10 @@
 
     <!-- ============IMAGE CARD PADDING============ -->
     <dimen name="image_card_padding">10dp</dimen>
-    <dimen name="image_card_end_padding">5dp</dimen>
+    <dimen name="image_card_end_padding">10dp</dimen>
 
     <!-- ============IMAGE CARD BORDER============ -->
-    <dimen name="image_card_border">2dp</dimen>
+    <dimen name="image_card_border">3dp</dimen>
 
 
 </resources>

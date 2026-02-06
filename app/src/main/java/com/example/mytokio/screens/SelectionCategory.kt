@@ -84,6 +84,7 @@ fun SelectionCardInformation(
 ) {
     Row( // Todos los elementos están en fila
         modifier = modifier
+            .padding(dimensionResource(R.dimen.image_card_padding))
             .fillMaxWidth(), // Ocupa el maximo espacio disponible
         verticalAlignment = Alignment.CenterVertically // Todos sus elementos estan centrados verticalmente
     ) {
@@ -92,12 +93,9 @@ fun SelectionCardInformation(
                 .height(dimensionResource(R.dimen.image_card_height))// Todas tienen un tamaño fijo
 
                 .padding(
-                    top = dimensionResource(R.dimen.image_card_padding),
-                    bottom = dimensionResource(R.dimen.image_card_padding),
-                    start = dimensionResource(R.dimen.image_card_padding),
                     end = dimensionResource(R.dimen.image_card_end_padding)
                 )
-                .weight(0.8f),
+                .weight(0.7f),
             shape = RoundedCornerShape( // El borde no está redondeado
                 0.dp
             ),
@@ -126,7 +124,7 @@ fun SelectionCardInformation(
             style = MaterialTheme.typography.headlineSmall,
             textAlign = TextAlign.Start,
             modifier = Modifier
-                .weight(1.2f),
+                .weight(1f),
             softWrap = true,
             maxLines = Int.MAX_VALUE,
             overflow = TextOverflow.Clip
@@ -176,7 +174,7 @@ fun SelectionCardPreview() {
             onClick = {},
             modifier = Modifier.fillMaxWidth(),
             categoria = zonasTematicas[2],
-            hasBorder = true
+            hasBorder = false
         )
     }
 }
