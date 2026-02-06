@@ -62,7 +62,7 @@ fun SelectionCard(
         ),
         border = BorderStroke( // Borde para la card
             width = dimensionResource(R.dimen.card_border_width),
-            color = Color.Black
+            color = MaterialTheme.colorScheme.tertiary
         )
 
     ) {
@@ -103,7 +103,7 @@ fun SelectionCardInformation(
             // En caso de que se indique que tiene que tener borde se pondrá uno
             border = if (hasBorder) BorderStroke(
                 width = dimensionResource(R.dimen.image_card_border),
-                color = Color.Black
+                color = MaterialTheme.colorScheme.tertiary
             ) else null
 
         ) {
