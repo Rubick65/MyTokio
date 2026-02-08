@@ -2,14 +2,12 @@ package com.example.mytokio.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -20,7 +18,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
@@ -30,7 +27,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mytokio.R
-import com.example.mytokio.data.categorias
 import com.example.mytokio.data.monumentos
 import com.example.mytokio.data.zonasTematicas
 import com.example.mytokio.model.dataObjects.Categoria
@@ -42,13 +38,13 @@ import com.example.mytokio.ui.theme.MyTokioTheme
 @Composable
 fun SelectionCard(
     modifier: Modifier = Modifier,
-    onClick: () -> Unit,
+    onClick: (Int) -> Unit,
     hasBorder: Boolean,
     categoria: Categoria
 ) {
     // Carta principal para todas las categorías y recomendaciones
     Card(
-        onClick = onClick, // Que ocurrirá cuando se haga click
+        onClick = { onClick(categoria.id) }, // Que ocurrirá cuando se haga click
         modifier = modifier.padding(
             end = dimensionResource(R.dimen.category_card_end_padding),
             top = dimensionResource(R.dimen.category_card_top_padding)
@@ -90,8 +86,7 @@ fun SelectionCardInformation(
     ) {
         Card( // Card para contener a la imagen
             modifier = Modifier
-                .height(dimensionResource(R.dimen.image_card_height))// Todas tienen un tamaño fijo
-
+                .aspectRatio(3f/2f)
                 .padding(
                     end = dimensionResource(R.dimen.image_card_end_padding)
                 )
@@ -112,7 +107,7 @@ fun SelectionCardInformation(
                 painter = painterResource(categoria.imagen),
                 contentDescription = stringResource(categoria.titulo),
                 contentScale = ContentScale.Crop, // Ocupa todo el espacio
-                modifier = Modifier,
+                modifier = Modifier.fillMaxSize(),
             )
 
         }
@@ -120,7 +115,7 @@ fun SelectionCardInformation(
 
         Text( // Texto con el nombre de cada categoría y/o recomendación
             text = stringResource(categoria.titulo),
-            color = MaterialTheme.colorScheme.tertiary,
+            color = MaterialTheme.colorScheme.secondary,
             style = MaterialTheme.typography.headlineSmall,
             textAlign = TextAlign.Start,
             modifier = Modifier
@@ -136,35 +131,27 @@ fun SelectionCardInformation(
 @Composable
 fun SelectionCardList(
     modifier: Modifier = Modifier,
-    backgroundImage: Int,
+    hasBorder: Boolean = false,
+    onClick: (Int) -> Unit,
     selectionList: List<Categoria>
 ) {
 
-    Box(modifier = modifier.fillMaxSize()) {
-        Image(
-            painter = painterResource(backgroundImage),
-            contentDescription = null, //Quitamos descripcíon de audio.
-            contentScale = ContentScale.Crop, //Para que ocupe toda la pantalla
-            modifier = Modifier.fillMaxSize()
-        )
 
-        LazyColumn(modifier = Modifier) {
+    LazyColumn(modifier = modifier.fillMaxSize()) {
 
-            items(items = selectionList) { item ->
+        items(items = selectionList) { item ->
 
-                SelectionCard(
-                    onClick = {},
-                    categoria = item,
-                    hasBorder = true
-                )
-
-            }
+            SelectionCard(
+                onClick = onClick,
+                categoria = item,
+                hasBorder = hasBorder
+            )
 
         }
+
     }
-
-
 }
+
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
@@ -185,7 +172,7 @@ fun SelectionListPreview() {
     MyTokioTheme {
         SelectionCardList(
             selectionList = monumentos,
-            backgroundImage = R.drawable.fondoclaro
+            onClick = {}
 
         )
     }

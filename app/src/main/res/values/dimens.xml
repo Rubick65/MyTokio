@@ -17,7 +17,7 @@
 
     <!-- ============CARD PADDING============ -->
     <dimen name="category_card_end_padding">40dp</dimen>
-    <dimen name="category_card_top_padding">1dp</dimen>
+    <dimen name="category_card_top_padding">5dp</dimen>
 
     <!-- ============CARD SHAPE============ -->
     <dimen name="top_bottom_end">100dp</dimen>

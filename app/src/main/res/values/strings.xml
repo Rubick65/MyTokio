@@ -1,8 +1,10 @@
 <resources>
 
     <!-- ============PANTALLAS============ -->
-    <string name="categoria_nombre">Categoria</string>
-    <string name="recomendacion_nombre">Recomendaciones</string>
+    <string name="categoria_nombre">Tokio</string>
+    <string name="lista_recomendacion_nombre">Recomendaciones</string>
+    <string name="remendacion"> </string>
+
 
     <!-- ============FLECHA============ -->
     <string name="flecha_atras">Flecha para ir hacia atras</string>

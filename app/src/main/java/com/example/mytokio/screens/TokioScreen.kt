@@ -1,51 +1,69 @@
 package com.example.mytokio.screens
 
 import androidx.annotation.StringRes
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
 import com.example.mytokio.R
+import com.example.mytokio.RecomendationScreen
+import com.example.mytokio.model.MyTokioViewModel
+import com.example.mytokio.model.TokioUiState
+import com.example.mytokio.ui.theme.LocalImages
 
 
-enum class MyTokioScreen(@StringRes val titulo: Int) {
-    Categorias(titulo = R.string.categoria_nombre),
-    Recomendacion(titulo = R.string.recomendacion_nombre)
+enum class MyTokioScreen() {
+    Categorias,
+    ListaRecomendacion,
+    Recomendacion,
+
+}
+
+enum class TokioContentType() {
+    OnlyCategory,
+    CategoryAndRecommendation
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TokioTopAppBar(
-    modifier: Modifier,
     navigateUp: () -> Unit,
     canNavigateBack: Boolean,
-    lastScreen: Boolean,
-    recomendationText: () -> String,
-    currenScreen: MyTokioScreen
+    @StringRes titel: Int
+
 ) {
-    TopAppBar(
+    CenterAlignedTopAppBar(
         title = {
-            Box(modifier = Modifier.fillMaxWidth()) {
-                Text(
-                    text = if (lastScreen) recomendationText() else stringResource(
-                        currenScreen.titulo
-                    ),
-                    modifier = Modifier.align(Alignment.Center),
-                    textAlign = TextAlign.Center
-                )
-            }
+            Text(
+                text = stringResource(titel),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
         },
-        modifier = modifier,
         navigationIcon = {
             if (canNavigateBack) {
                 IconButton(onClick = navigateUp) {
@@ -59,24 +77,159 @@ fun TokioTopAppBar(
     )
 }
 
+@Composable
+fun MyTokioApp(
+    windowSize: WindowWidthSizeClass,
+    viewModel: MyTokioViewModel = viewModel(),
+    navController: NavHostController = rememberNavController()
+) {
+
+    val contentType: TokioContentType
+    val background = LocalImages.current.background
+    // Get current back stack entry
+    val backStackEntry by navController.currentBackStackEntryAsState()
+    // Get the name of the current screen
+    val currentScreen = MyTokioScreen.valueOf(
+        backStackEntry?.destination?.route ?: MyTokioScreen.Categorias.name
+    )
+
+    when (windowSize) {
+        WindowWidthSizeClass.Compact -> {
+            contentType = TokioContentType.OnlyCategory
+        }
+
+        WindowWidthSizeClass.Medium -> {
+            contentType = TokioContentType.OnlyCategory
+        }
+
+        WindowWidthSizeClass.Expanded -> {
+            contentType = TokioContentType.CategoryAndRecommendation
+        }
+
+        else -> {
+            contentType = TokioContentType.OnlyCategory
+        }
+    }
+
+    val uiState by viewModel.uiState.collectAsState()
+
+    Scaffold(
+
+        topBar = {
+            TokioTopAppBar(
+                canNavigateBack = navController.previousBackStackEntry != null,
+                navigateUp = { navController.navigateUp() },
+                titel = currentTitleText(currentScreen, uiState)
+            )
+        }
+
+    ) { innerPadding ->
+
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
+            Image(
+                painter = painterResource(background),
+                contentDescription = null, //Quitamos descripcíon de audio.
+                contentScale = ContentScale.Crop, //Para que ocupe toda la pantalla
+                modifier = Modifier.fillMaxSize()
+            )
+
+            NavHost(
+                navController = navController,
+                startDestination = MyTokioScreen.Categorias.name,
+                modifier = Modifier
+                    .fillMaxSize()
+            ) {
+
+
+                composable(MyTokioScreen.Categorias.name) {
+                    CategoriasScreen(contentType, uiState, navController, viewModel)
+                }
+
+                composable(MyTokioScreen.ListaRecomendacion.name) {
+                    SelectionCardList(
+                        selectionList = uiState.selectedListOfRecommendations,
+                        hasBorder = true,
+                        onClick = {
+                            viewModel.selectRecommendation(it)
+                            navController.navigate(MyTokioScreen.Recomendacion.name)
+                        }
+                    )
+
+                }
 
 
 
-//@Preview(showBackground = true)
-//@Composable
-//fun TokioAppBarPreview() {
-//    MyTokioTheme {
-//        TokioTopAppBar(
-//            navigateUp = {},
-//            canNavigateBack = false,
-//            lastScreen = false,
-//            recomendationText = returnText(),
-//            currenScreen = null
-//
-//        )
-//    }
-//}
+                composable(route = MyTokioScreen.Recomendacion.name) {
+                    RecomendationScreen(
+                        currentRecommendation = uiState.currentRecomendation
+                    )
 
-//fun returnText(): String {
-//    return "Hola";
-//}
+                }
+            }
+
+
+        }
+
+
+    }
+}
+
+@Composable
+fun CategoriasScreen(
+    contentType: TokioContentType,
+    uiState: TokioUiState,
+    navController: NavHostController,
+    viewModel: MyTokioViewModel
+) {
+
+    if (contentType == TokioContentType.OnlyCategory) {
+
+        SelectionCardList(
+            selectionList = uiState.categoryList,
+            onClick = {
+                viewModel.selectRecommendationList(it)
+                navController.navigate(MyTokioScreen.ListaRecomendacion.name)
+            }
+        )
+
+    } else {
+
+        Row {
+
+            SelectionCardList(
+                selectionList = uiState.categoryList,
+                onClick = {
+                    viewModel.selectRecommendationList(it)
+                    navController.navigate(MyTokioScreen.ListaRecomendacion.name)
+                },
+                modifier = Modifier.weight(1f)
+            )
+
+            SelectionCardList(
+                selectionList = uiState.selectedListOfRecommendations,
+                hasBorder = true,
+                onClick = {
+                    viewModel.selectRecommendation(it)
+                    navController.navigate(MyTokioScreen.Recomendacion.name)
+                },
+                modifier = Modifier.weight(1f)
+            )
+        }
+    }
+}
+
+
+fun currentTitleText(currenScreen: MyTokioScreen, uiState: TokioUiState): Int {
+    val currentTitle = when (currenScreen) {
+        MyTokioScreen.Categorias -> R.string.categoria_nombre
+        MyTokioScreen.ListaRecomendacion -> uiState.currentCategory.titulo
+        MyTokioScreen.Recomendacion -> uiState.currentRecomendation.titulo
+    }
+
+    return currentTitle
+}
+

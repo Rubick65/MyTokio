@@ -1,5 +1,7 @@
 package com.example.mytokio.model
 
+import androidx.compose.material3.R
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.ViewModel
 import com.example.mytokio.data.cafeterias
 import com.example.mytokio.data.categorias
@@ -32,23 +34,44 @@ class MyTokioViewModel : ViewModel() {
      * Selecciona la lista de recomendaciones a mostrar
      * en función del id de la categoría a la que pertenezcan
      */
-    fun selectRecomendationList(categoryID: Int) {
+    fun selectRecommendationList(categoryID: Int) {
 
-        // Lista temporal para guardar las recomendaciones
-        var temporalRecomendationList: List<Recomendacion>
+        selectCategory(categoryID)
 
         // En función del id se selecciona una lista de reomendaciones u otra
-        when (categoryID) {
-            1 -> temporalRecomendationList = zonasTematicas
-            2 -> temporalRecomendationList = cafeterias
-            3 -> temporalRecomendationList = parques
-            4 -> temporalRecomendationList = templos
-            else -> temporalRecomendationList = monumentos
+        val temporalRecomendationList = when (categoryID) {
+            1 -> zonasTematicas
+            2 -> cafeterias
+            3 -> parques
+            4 -> templos
+            else -> monumentos
         }
 
         // Se actualiza la lista de recomendaciones
         updateRecomendationList(temporalRecomendationList)
 
+    }
+
+    private fun selectCategory(categoryID: Int) {
+        val categoryFilter = uiState.value.categoryList.find { it.id == categoryID }
+
+        _uiState.update {
+            it.copy(
+                currentCategory = categoryFilter!!
+            )
+        }
+
+    }
+
+    fun selectRecommendation(recommendationID: Int) {
+        val recommendationFilter =
+            uiState.value.selectedListOfRecommendations.find { it.id == recommendationID }
+        _uiState.update {
+            it.copy(
+                currentRecomendation = recommendationFilter!!
+            )
+
+        }
     }
 
     /**
@@ -71,6 +94,18 @@ class MyTokioViewModel : ViewModel() {
                 listOfFavoriteRecomendations = actualList
             )
         }
+    }
+
+    fun deleteFromFavorite(recomendation: Recomendacion) {
+        val updatedList = uiState.value.listOfFavoriteRecomendations
+        updatedList.remove(recomendation)
+
+        _uiState.update { state ->
+            state.copy(
+                listOfFavoriteRecomendations = updatedList
+            )
+        }
+
     }
 
 

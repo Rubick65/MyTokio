@@ -1,12 +1,17 @@
 package com.example.mytokio
 
+import android.media.Image
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.Card
@@ -18,52 +23,57 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
+import com.example.mytokio.data.defautlRecomendation
+import com.example.mytokio.model.dataObjects.Recomendacion
+import com.example.mytokio.ui.theme.MyTokioTheme
 
 //Pantalla del sitio
 @Composable
 fun RecomendationScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    currentRecommendation: Recomendacion
 ) {
-    Column(
+    LazyColumn(
         modifier = modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
 
-        TopRecommendedBar()
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        RecommendedImageBox()
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        RatingAndFavRow()
-
-        Spacer(modifier = Modifier.height(6.dp))
-
-        MapsAndShareRow()
-
-        Spacer(modifier = Modifier.height(12.dp))
-
-        RecommendedDescriptionBox()
-    }
-}
+        item {
+            RecommendedImageBox(
+                currentImage = currentRecommendation.imagen,
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(8.dp))
 
 
-//Barra superior sitio recomendado
-@Composable
-fun TopRecommendedBar(
-    modifier: Modifier = Modifier
-) {
-    Box(
-        modifier = modifier.fillMaxWidth(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = "",
-            style = MaterialTheme.typography.titleMedium
-        )
+        }
+
+        item {
+            RatingAndFavRow(modifier = Modifier.fillMaxWidth())
+
+            Spacer(modifier = Modifier.height(6.dp))
+
+        }
+
+        item {
+            MapsAndShareRow(modifier = Modifier.fillMaxWidth())
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+        }
+
+        item {
+
+            RecommendedDescriptionBox(
+                currentDescription = currentRecommendation.descripcion,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+        }
+
+
     }
 }
 
@@ -71,15 +81,16 @@ fun TopRecommendedBar(
 // Imagen principal
 @Composable
 fun RecommendedImageBox(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    @DrawableRes currentImage: Int
 ) {
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .height(260.dp)
+
     ) {
         Image(
-            painter = painterResource(id = R.drawable.jojo),
+            painter = painterResource(id = currentImage),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
@@ -129,22 +140,21 @@ fun MapsAndShareRow(
 //Caja de descripcion
 @Composable
 fun RecommendedDescriptionBox(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    @StringRes currentDescription: Int
 ) {
     Card(
         modifier = modifier
-            .fillMaxWidth()
-            .height(200.dp),
+            .fillMaxWidth(),
         shape = RoundedCornerShape(10.dp),
         border = BorderStroke(2.dp, MaterialTheme.colorScheme.primary)
     ) {
         Box(
             modifier = Modifier
-                .fillMaxSize()
                 .padding(12.dp)
         ) {
             Text(
-                text = "",
+                text = stringResource(currentDescription),
                 style = MaterialTheme.typography.bodyMedium
             )
         }
@@ -172,7 +182,7 @@ fun RatingBar(
     modifier: Modifier = Modifier,
     maxStars: Int = 5
 ) {
-    var rating by remember { mutableStateOf(3) }
+    var rating by remember { mutableStateOf(0) }
 
     Row(modifier = modifier) {
         for (i in 1..maxStars) {
@@ -195,6 +205,11 @@ fun RatingBar(
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun RecomendationScreenPreview() {
-    RecomendationScreen()
+    MyTokioTheme() {
+        RecomendationScreen(
+            currentRecommendation = defautlRecomendation
+        )
+    }
+
 }
 

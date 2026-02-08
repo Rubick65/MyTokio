@@ -1,6 +1,7 @@
 package com.example.mytokio.ui.theme
 
 import android.os.Build
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -8,7 +9,10 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.platform.LocalContext
+import com.example.mytokio.R
 
 private val DarkColorScheme = darkColorScheme(
     primary = CARDS_OSCURO, //Color de fondo de cards
@@ -32,6 +36,15 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+data class MyTokioImages(
+    @DrawableRes val background: Int
+)
+
+// Creamos un CompositionLocal para poder acceder desde cualquier composable
+val LocalImages = staticCompositionLocalOf<MyTokioImages> {
+    error("No Images provided")
+}
+
 @Composable
 fun MyTokioTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -49,9 +62,19 @@ fun MyTokioTheme(
         else -> LightColorScheme
     }
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
+    val images = MyTokioImages(
+        background = if (darkTheme)
+            R.drawable.fondooscuro
+        else
+            R.drawable.fondoclaro
     )
+
+    CompositionLocalProvider(LocalImages provides images) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = Typography,
+            content = content
+        )
+    }
+    
 }

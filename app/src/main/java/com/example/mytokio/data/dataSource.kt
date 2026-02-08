@@ -3,6 +3,7 @@ package com.example.mytokio.data
 import com.example.mytokio.R
 import com.example.mytokio.model.dataObjects.Categoria
 import com.example.mytokio.model.dataObjects.Recomendacion
+import java.util.Locale
 
 
 val categorias = listOf(
@@ -378,6 +379,8 @@ val monumentos = listOf(
     ),
 )
 
+
+val defaultCategory = Categoria(5, R.drawable.jojo, R.string.categoria_5)
 val defautlRecomendation = Recomendacion(
     10,
     R.drawable.jojo,
