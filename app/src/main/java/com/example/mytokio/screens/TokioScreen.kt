@@ -12,6 +12,7 @@ import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
@@ -60,6 +61,7 @@ fun TokioTopAppBar(
         title = {
             Text(
                 text = stringResource(titel),
+                style = MaterialTheme.typography.titleLarge,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -161,11 +163,12 @@ fun MyTokioApp(
 
                 }
 
-
-
                 composable(route = MyTokioScreen.Recomendacion.name) {
                     RecomendationScreen(
-                        currentRecommendation = uiState.currentRecomendation
+                        currentRecommendation = uiState.currentRecomendation,
+                        // Aquí se pasa el contentType, que sirve para indicar cuando la pantalla tiene un tamaño y otro
+                        contentType = contentType,
+                        onClick = { viewModel.favoriteFunctions(it) }
                     )
 
                 }
@@ -199,12 +202,10 @@ fun CategoriasScreen(
     } else {
 
         Row {
-
             SelectionCardList(
                 selectionList = uiState.categoryList,
                 onClick = {
                     viewModel.selectRecommendationList(it)
-                    navController.navigate(MyTokioScreen.ListaRecomendacion.name)
                 },
                 modifier = Modifier.weight(1f)
             )

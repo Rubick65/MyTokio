@@ -43,14 +43,17 @@ val Typography = Typography(
         fontFamily = Bungee,
         fontWeight = FontWeight.Normal,
         fontSize = 18.sp,
-        lineHeight = 20.sp,
-        letterSpacing = 0.3.sp
-    ),
+        ),
     bodyMedium = TextStyle(
         fontFamily = Jaro,
         fontWeight = FontWeight.Normal,
         fontSize = 20.sp
-        )
+    ),
+    titleLarge = TextStyle(
+        fontFamily = SansitasWashed,
+        fontWeight = FontWeight.Normal,
+        fontSize = 25.sp
+    )
     /* Other default text styles to override
     titleLarge = TextStyle(
         fontFamily = FontFamily.Default,

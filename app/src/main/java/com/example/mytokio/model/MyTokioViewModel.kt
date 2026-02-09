@@ -1,7 +1,5 @@
 package com.example.mytokio.model
 
-import androidx.compose.material3.R
-import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.ViewModel
 import com.example.mytokio.data.cafeterias
 import com.example.mytokio.data.categorias
@@ -44,7 +42,8 @@ class MyTokioViewModel : ViewModel() {
             2 -> cafeterias
             3 -> parques
             4 -> templos
-            else -> monumentos
+            5 -> monumentos
+            else -> uiState.value.listOfFavoriteRecomendations
         }
 
         // Se actualiza la lista de recomendaciones
@@ -86,7 +85,17 @@ class MyTokioViewModel : ViewModel() {
         }
     }
 
-    fun addToFavorite(recomendation: Recomendacion) {
+
+    fun favoriteFunctions(recomendation: Recomendacion) {
+        recomendation.favoritos.value = !recomendation.favoritos.value
+
+        if (recomendation.favoritos.value)
+            addToFavorite(recomendation)
+        else
+            deleteFromFavorite(recomendation)
+    }
+
+    private fun addToFavorite(recomendation: Recomendacion) {
         val actualList = uiState.value.listOfFavoriteRecomendations
         actualList.add(recomendation)
         _uiState.update { state ->
@@ -96,7 +105,7 @@ class MyTokioViewModel : ViewModel() {
         }
     }
 
-    fun deleteFromFavorite(recomendation: Recomendacion) {
+    private fun deleteFromFavorite(recomendation: Recomendacion) {
         val updatedList = uiState.value.listOfFavoriteRecomendations
         updatedList.remove(recomendation)
 

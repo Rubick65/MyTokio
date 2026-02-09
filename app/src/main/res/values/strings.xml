@@ -17,6 +17,7 @@
     <string name="categoria_3">Parques</string>
     <string name="categoria_4">Templos</string>
     <string name="categoria_5">Monumentos</string>
+    <string name="categoria_favoritos">Favoritos</string>
 
     <!-- ============ZONAS TEMATICAS============ -->
     <string name="zona_tematica_titulo_1">Tokyo Joypolis</string>

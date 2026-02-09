@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -26,6 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.mytokio.R
 import com.example.mytokio.data.monumentos
 import com.example.mytokio.data.zonasTematicas
@@ -86,7 +88,7 @@ fun SelectionCardInformation(
     ) {
         Card( // Card para contener a la imagen
             modifier = Modifier
-                .aspectRatio(3f/2f)
+                .aspectRatio(3f / 2f)
                 .padding(
                     end = dimensionResource(R.dimen.image_card_end_padding)
                 )
@@ -111,7 +113,6 @@ fun SelectionCardInformation(
             )
 
         }
-
 
         Text( // Texto con el nombre de cada categoría y/o recomendación
             text = stringResource(categoria.titulo),

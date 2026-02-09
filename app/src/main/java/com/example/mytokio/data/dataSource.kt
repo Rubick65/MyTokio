@@ -12,6 +12,7 @@ val categorias = listOf(
     Categoria(3, R.drawable.jojo, R.string.categoria_3),
     Categoria(4, R.drawable.jojo, R.string.categoria_4),
     Categoria(5, R.drawable.jojo, R.string.categoria_5),
+    Categoria(id = 6, R.drawable.jojo, R.string.categoria_favoritos)
 )
 
 val zonasTematicas = listOf(

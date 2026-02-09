@@ -24,17 +24,21 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.mytokio.data.defautlRecomendation
 import com.example.mytokio.model.dataObjects.Recomendacion
 import com.example.mytokio.pruebasBoton.mapRecomendation
 import com.example.mytokio.pruebasBoton.shareRecomendation
+import com.example.mytokio.screens.TokioContentType
 import com.example.mytokio.ui.theme.MyTokioTheme
 
 // Pantalla del sitio
 @Composable
 fun RecomendationScreen(
     modifier: Modifier = Modifier,
+    contentType: TokioContentType, // Este es el content Type que indica que tipo de pantalla está actualmente
+    onClick: (Recomendacion) -> Unit,
     currentRecommendation: Recomendacion
 ) {
     LazyColumn(
@@ -44,6 +48,11 @@ fun RecomendationScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
+//        if (contentType == TokioContentType.CategoryAndRecommendation) // Esto es para cuando la pantalla es grande (Teléfono horizontal tablet y z flip con doble pantalla)
+//            // Aquí va cuando es tablet y horizontal en general
+//
+//            else // Este caso es para cuando es normal y tiene el tamaño normal
+//                // Y aquí cuando es normal
         item {
             RecommendedImageBox(
                 currentImage = currentRecommendation.imagen,
@@ -59,7 +68,9 @@ fun RecomendationScreen(
 
         item {
             RatingAndFavRow(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                recomendacion = currentRecommendation,
+                onClick = onClick
             )
 
             Spacer(
@@ -101,7 +112,7 @@ fun RecommendedImageBox(
     modifier: Modifier = Modifier,
     @DrawableRes currentImage: Int
 ) {
-    Card(
+    Box(
         modifier = modifier
             .fillMaxWidth()
             .aspectRatio(16f / 9f)
@@ -122,7 +133,9 @@ fun RecommendedImageBox(
  */
 @Composable
 fun RatingAndFavRow(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClick: (Recomendacion) -> Unit,
+    recomendacion: Recomendacion
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
@@ -130,7 +143,7 @@ fun RatingAndFavRow(
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         RatingBar()
-        ActionImageButton()
+        ActionImageButton(onClick = onClick, recomendacion = recomendacion)
     }
 }
 
@@ -172,10 +185,7 @@ fun RecommendedDescriptionBox(
 ) {
     Card(
         modifier = modifier
-            .fillMaxWidth()
-            .height(
-                dimensionResource(R.dimen.recommendation_description_height)
-            ),
+            .fillMaxWidth(),
         shape = RoundedCornerShape(
             dimensionResource(R.dimen.recommendation_description_corner)
         ),
@@ -191,6 +201,7 @@ fun RecommendedDescriptionBox(
         ) {
             Text(
                 text = stringResource(currentDescription),
+                textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.bodyMedium
             )
         }
@@ -226,9 +237,10 @@ fun ActionImageButtonIntent(
 // Botón favorito
 @Composable
 fun ActionImageButton(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClick: (Recomendacion) -> Unit,
+    recomendacion: Recomendacion
 ) {
-    var isFavorite by remember { mutableStateOf(false) }
 
     Card(
         modifier = modifier.size(
@@ -236,10 +248,10 @@ fun ActionImageButton(
         ),
         shape = RoundedCornerShape(50)
     ) {
-        IconButton(onClick = { isFavorite = !isFavorite }) {
+        IconButton(onClick = { onClick(recomendacion) }) {
             Image(
                 painter = painterResource(
-                    if (isFavorite) R.drawable.corarojo else R.drawable.cora
+                    if (recomendacion.favoritos.value) R.drawable.corarojo else R.drawable.cora
                 ),
                 contentDescription = null,
                 modifier = Modifier.size(
@@ -292,7 +304,9 @@ fun RatingBar(
 fun RecomendationScreenPreview() {
     MyTokioTheme {
         RecomendationScreen(
-            currentRecommendation = defautlRecomendation
+            currentRecommendation = defautlRecomendation,
+            onClick = {},
+            contentType = TokioContentType.CategoryAndRecommendation
         )
     }
 }
