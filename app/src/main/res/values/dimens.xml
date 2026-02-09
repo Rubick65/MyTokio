@@ -17,7 +17,7 @@
 
     <!-- ============CARD PADDING============ -->
     <dimen name="category_card_end_padding">40dp</dimen>
-    <dimen name="category_card_top_padding">5dp</dimen>
+    <dimen name="category_card_top_padding">1dp</dimen>
 
     <!-- ============CARD SHAPE============ -->
     <dimen name="top_bottom_end">100dp</dimen>
@@ -26,7 +26,7 @@
     <dimen name="card_border_width">4dp</dimen>
 
     <!-- ============ICON SIZE============ -->
-    <dimen name="icon_size">25dp</dimen>
+    <dimen name="icon_size">40dp</dimen>
 
 
     <!-- ============IMAGE CARD SIZE============ -->
@@ -38,6 +38,37 @@
 
     <!-- ============IMAGE CARD BORDER============ -->
     <dimen name="image_card_border">3dp</dimen>
+
+
+
+    <!-- ============RECOMMENDATION SCREEN PADDING============ -->
+    <dimen name="recommendation_screen_padding">16dp</dimen>
+
+
+    <!-- ============RECOMMENDATION SPACERS============ -->
+    <dimen name="recommendation_space_large">12dp</dimen>
+    <dimen name="recommendation_space_medium">8dp</dimen>
+    <dimen name="recommendation_space_small">6dp</dimen>
+
+
+    <!-- ============RECOMMENDATION IMAGE============ -->
+    <dimen name="recommendation_image_height">260dp</dimen>
+
+
+    <!-- ============ACTION BUTTONS============ -->
+    <dimen name="action_button_size">44dp</dimen>
+    <dimen name="action_buttons_spacing">16dp</dimen>
+
+    <!-- ============DESCRIPTION CARD============ -->
+    <dimen name="recommendation_description_height">200dp</dimen>
+    <dimen name="recommendation_description_corner">10dp</dimen>
+    <dimen name="recommendation_description_border">2dp</dimen>
+    <dimen name="recommendation_description_padding">12dp</dimen>
+
+
+    <!-- ============RATING============ -->
+    <dimen name="rating_star_size">45dp</dimen>
+
 
 
 </resources>
