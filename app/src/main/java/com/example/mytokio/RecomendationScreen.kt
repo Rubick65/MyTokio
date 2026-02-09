@@ -26,6 +26,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import com.example.mytokio.data.defautlRecomendation
 import com.example.mytokio.model.dataObjects.Recomendacion
+import com.example.mytokio.pruebasBoton.MapButton
+import com.example.mytokio.pruebasBoton.ShareButton
 import com.example.mytokio.ui.theme.MyTokioTheme
 
 //Pantalla del sitio
@@ -58,7 +60,7 @@ fun RecomendationScreen(
         }
 
         item {
-            MapsAndShareRow(modifier = Modifier.fillMaxWidth())
+            MapsAndShareRow(modifier = Modifier.fillMaxWidth(),currentRecommendation)
 
             Spacer(modifier = Modifier.height(12.dp))
 
@@ -125,14 +127,15 @@ fun RatingAndFavRow(
  */
 @Composable
 fun MapsAndShareRow(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    currentRecommendation: Recomendacion
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.spacedBy(16.dp)
+        horizontalArrangement = Arrangement.spacedBy(3.dp)
     ) {
-        ActionImageButton()
-        ActionImageButton()
+        ActionImageButtonIntent(Modifier, { ShareButton(currentRecommendation.url) })
+        ActionImageButtonIntent(Modifier, { MapButton(currentRecommendation.url) })
     }
 }
 
@@ -164,8 +167,22 @@ fun RecommendedDescriptionBox(
 
 // Botones
 @Composable
+fun ActionImageButtonIntent(
+    modifier: Modifier = Modifier,
+    function: @Composable () -> Unit
+) {
+    Card(
+        modifier = modifier.size(44.dp),
+        shape = RoundedCornerShape(50)
+    ) {
+        function()
+    }
+}
+
+// Botones
+@Composable
 fun ActionImageButton(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Card(
         modifier = modifier.size(44.dp),
