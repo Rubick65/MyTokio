@@ -1,6 +1,5 @@
 package com.example.mytokio
 
-import android.media.Image
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.ui.tooling.preview.Preview
@@ -11,10 +10,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.Card
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
@@ -23,11 +23,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import com.example.mytokio.data.defautlRecomendation
 import com.example.mytokio.model.dataObjects.Recomendacion
-import com.example.mytokio.pruebasBoton.MapButton
-import com.example.mytokio.pruebasBoton.ShareButton
+import com.example.mytokio.pruebasBoton.mapRecomendation
+import com.example.mytokio.pruebasBoton.shareRecomendation
 import com.example.mytokio.ui.theme.MyTokioTheme
 
 //Pantalla del sitio
@@ -115,7 +116,6 @@ fun RatingAndFavRow(
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         RatingBar()
-
         ActionImageButton()
     }
 }
@@ -134,8 +134,12 @@ fun MapsAndShareRow(
         modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(3.dp)
     ) {
-        ActionImageButtonIntent(Modifier, { ShareButton(currentRecommendation.url) })
-        ActionImageButtonIntent(Modifier, { MapButton(currentRecommendation.url) })
+        ActionImageButtonIntent(Modifier,R.drawable.icono_compartir_nitido,R.string.compartir_recomendacion,
+            shareRecomendation(currentRecommendation.url)
+        )
+        ActionImageButtonIntent(Modifier,R.drawable.icono_maps_nitido,R.string.abrir_maps,
+            mapRecomendation(currentRecommendation.url)
+        )
     }
 }
 
@@ -169,13 +173,23 @@ fun RecommendedDescriptionBox(
 @Composable
 fun ActionImageButtonIntent(
     modifier: Modifier = Modifier,
-    function: @Composable () -> Unit
+    @DrawableRes icon : Int,
+    @StringRes contentDescription: Int,
+    onClick:() -> Unit
 ) {
     Card(
         modifier = modifier.size(44.dp),
         shape = RoundedCornerShape(50)
     ) {
-        function()
+        IconButton(
+            onClick = onClick
+        ) {
+            Icon(
+                painter = painterResource(icon),
+                contentDescription = stringResource(contentDescription),
+                modifier = Modifier.size(dimensionResource(R.dimen.icon_size))
+            )
+        }
     }
 }
 
