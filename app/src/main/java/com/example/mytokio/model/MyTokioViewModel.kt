@@ -1,5 +1,6 @@
 package com.example.mytokio.model
 
+import androidx.compose.runtime.MutableState
 import androidx.lifecycle.ViewModel
 import com.example.mytokio.data.cafeterias
 import com.example.mytokio.data.categorias
@@ -115,6 +116,11 @@ class MyTokioViewModel : ViewModel() {
             )
         }
 
+    }
+
+    fun ratingChange(recommendation: Recomendacion, i: Int) {
+        recommendation.raiting.value =
+            if (recommendation.raiting.value == i) 0 else i
     }
 
 

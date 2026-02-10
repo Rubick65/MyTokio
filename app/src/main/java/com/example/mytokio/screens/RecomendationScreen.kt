@@ -38,6 +38,7 @@ import com.example.mytokio.ui.theme.MyTokioTheme
 @Composable
 fun RecomendationScreen(
     modifier: Modifier = Modifier,
+    onRatingClick: (Recomendacion, Int) -> Unit,
     contentType: TokioContentType, // Este es el content Type que indica que tipo de pantalla está actualmente
     onClick: (Recomendacion) -> Unit,
     currentRecommendation: Recomendacion
@@ -72,7 +73,8 @@ fun RecomendationScreen(
             RatingAndFavRow(
                 modifier = Modifier.fillMaxWidth(),
                 recomendacion = currentRecommendation,
-                onClick = onClick
+                onClick = onClick,
+                onRatingClick = onRatingClick
             )
 
             Spacer(
@@ -136,6 +138,7 @@ fun RecommendedImageBox(
 @Composable
 fun RatingAndFavRow(
     modifier: Modifier = Modifier,
+    onRatingClick: (Recomendacion, Int) -> Unit,
     onClick: (Recomendacion) -> Unit,
     recomendacion: Recomendacion
 ) {
@@ -144,7 +147,7 @@ fun RatingAndFavRow(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
-        RatingBar()
+        RatingBar(recommendation = recomendacion, onClick = onRatingClick)
         ActionImageButton(onClick = onClick, recomendacion = recomendacion)
     }
 }
@@ -268,16 +271,19 @@ fun ActionImageButton(
 @Composable
 fun RatingBar(
     modifier: Modifier = Modifier,
+    onClick: (Recomendacion, Int) -> Unit,
+    recommendation: Recomendacion,
     maxStars: Int = 5
 ) {
-    var rating by remember { mutableStateOf(0) }
+
+    val raiting = recommendation.raiting.value
 
     Row(
         modifier = modifier,
         verticalAlignment = Alignment.CenterVertically
     ) {
         for (i in 1..maxStars) {
-            val isSelected = i <= rating
+            val isSelected = i <= raiting
 
             Icon(
                 imageVector = if (isSelected) {
@@ -294,21 +300,22 @@ fun RatingBar(
                 modifier = Modifier
                     .size(dimensionResource(R.dimen.rating_star_size))
                     .clickable {
-                        rating = if (rating == i) 0 else i
+                        onClick(recommendation, i)
                     }
             )
         }
     }
 }
 
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun RecomendationScreenPreview() {
-    MyTokioTheme {
-        RecomendationScreen(
-            currentRecommendation = defautlRecomendation,
-            onClick = {},
-            contentType = TokioContentType.CategoryAndRecommendation
-        )
-    }
-}
+//@Preview(showBackground = true, showSystemUi = true)
+//@Composable
+//fun RecomendationScreenPreview() {
+//    MyTokioTheme {
+//        RecomendationScreen(
+//            currentRecommendation = defautlRecomendation,
+//            onClick = {},
+//            onRatingClick = {},
+//            contentType = TokioContentType.CategoryAndRecommendation,
+//        )
+//    }
+//}

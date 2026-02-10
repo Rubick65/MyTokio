@@ -31,7 +31,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.mytokio.R
-import com.example.mytokio.screens.RecomendationScreen
 import com.example.mytokio.model.MyTokioViewModel
 import com.example.mytokio.model.TokioUiState
 import com.example.mytokio.ui.theme.LocalImages
@@ -174,6 +173,12 @@ fun MyTokioApp(
                         currentRecommendation = uiState.currentRecomendation,
                         // Aquí se pasa el contentType, que sirve para indicar cuando la pantalla tiene un tamaño y otro
                         contentType = contentType,
+                        onRatingClick = { recomendation, i ->
+                            viewModel.ratingChange(
+                                recomendation,
+                                i
+                            )
+                        },
                         onClick = { viewModel.favoriteFunctions(it) }
                     )
 
