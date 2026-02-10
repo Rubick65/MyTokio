@@ -35,6 +35,7 @@
     <!-- ============IMAGE CARD PADDING============ -->
     <dimen name="image_card_padding">10dp</dimen>
     <dimen name="image_card_end_padding">10dp</dimen>
+    <dimen name="image_card_end_padding_category">20dp</dimen>
 
     <!-- ============IMAGE CARD BORDER============ -->
     <dimen name="image_card_border">3dp</dimen>

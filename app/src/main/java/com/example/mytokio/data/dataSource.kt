@@ -3,16 +3,15 @@ package com.example.mytokio.data
 import com.example.mytokio.R
 import com.example.mytokio.model.dataObjects.Categoria
 import com.example.mytokio.model.dataObjects.Recomendacion
-import java.util.Locale
 
 
 val categorias = listOf(
-    Categoria(1, R.drawable.jojo, R.string.categoria_1),
-    Categoria(2, R.drawable.jojo, R.string.categoria_2),
-    Categoria(3, R.drawable.jojo, R.string.categoria_3),
-    Categoria(4, R.drawable.jojo, R.string.categoria_4),
-    Categoria(5, R.drawable.jojo, R.string.categoria_5),
-    Categoria(id = 6, R.drawable.jojo, R.string.categoria_favoritos)
+    Categoria(1, R.drawable.parque_tematico, R.string.categoria_1),
+    Categoria(2, R.drawable.restaurante, R.string.categoria_2),
+    Categoria(3, R.drawable.parque, R.string.categoria_3),
+    Categoria(4, R.drawable.templo, R.string.categoria_4),
+    Categoria(5, R.drawable.monumento, R.string.categoria_5),
+    Categoria(id = 6, R.drawable.corarojo, R.string.categoria_favoritos)
 )
 
 val zonasTematicas = listOf(

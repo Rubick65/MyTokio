@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -18,8 +17,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -27,7 +26,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.mytokio.R
 import com.example.mytokio.data.monumentos
 import com.example.mytokio.data.zonasTematicas
@@ -88,13 +86,18 @@ fun SelectionCardInformation(
     ) {
         Card( // Card para contener a la imagen
             modifier = Modifier
-                .aspectRatio(3f / 2f)
+                .aspectRatio(if (hasBorder) 3f / 2f else 1.5f / 1.2f)
                 .padding(
-                    end = dimensionResource(R.dimen.image_card_end_padding)
+                    end = dimensionResource(
+                        if (hasBorder) R.dimen.image_card_end_padding
+                    else R.dimen.image_card_end_padding_category)
                 )
-                .weight(0.7f),
+                .weight( if (hasBorder) 0.7f else 0.5f),
             shape = RoundedCornerShape( // El borde no está redondeado
                 0.dp
+            ),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.Transparent
             ),
 
             // En caso de que se indique que tiene que tener borde se pondrá uno
@@ -111,7 +114,6 @@ fun SelectionCardInformation(
                 contentScale = ContentScale.Crop, // Ocupa todo el espacio
                 modifier = Modifier.fillMaxSize(),
             )
-
         }
 
         Text( // Texto con el nombre de cada categoría y/o recomendación
