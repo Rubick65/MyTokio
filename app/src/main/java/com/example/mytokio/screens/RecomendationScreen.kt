@@ -1,4 +1,4 @@
-package com.example.mytokio
+package com.example.mytokio.screens
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -26,11 +26,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.example.mytokio.R
 import com.example.mytokio.data.defautlRecomendation
 import com.example.mytokio.model.dataObjects.Recomendacion
 import com.example.mytokio.pruebasBoton.mapRecomendation
 import com.example.mytokio.pruebasBoton.shareRecomendation
-import com.example.mytokio.screens.TokioContentType
 import com.example.mytokio.ui.theme.MyTokioTheme
 
 // Pantalla del sitio
@@ -46,6 +47,7 @@ fun RecomendationScreen(
             .fillMaxSize()
             .padding(dimensionResource(R.dimen.recommendation_screen_padding)),
         horizontalAlignment = Alignment.CenterHorizontally
+
     ) {
 
 //        if (contentType == TokioContentType.CategoryAndRecommendation) // Esto es para cuando la pantalla es grande (Teléfono horizontal tablet y z flip con doble pantalla)
@@ -222,7 +224,7 @@ fun ActionImageButtonIntent(
         ),
         shape = RoundedCornerShape(50)
     ) {
-        IconButton(onClick = onClick) {
+        IconButton(onClick = onClick, modifier = Modifier.padding(5.dp)) {
             Icon(
                 painter = painterResource(icon),
                 contentDescription = stringResource(contentDescription),
