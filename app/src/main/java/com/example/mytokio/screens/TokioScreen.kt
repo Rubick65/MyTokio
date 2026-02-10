@@ -31,7 +31,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.mytokio.R
-import com.example.mytokio.RecomendationScreen
+import com.example.mytokio.screens.RecomendationScreen
 import com.example.mytokio.model.MyTokioViewModel
 import com.example.mytokio.model.TokioUiState
 import com.example.mytokio.ui.theme.LocalImages
@@ -148,18 +148,24 @@ fun MyTokioApp(
 
 
                 composable(MyTokioScreen.Categorias.name) {
-                    CategoriasScreen(contentType, uiState, navController, viewModel)
+                    CategoriasScreen(
+                        contentType,
+                        uiState = uiState,
+                        navController = navController,
+                        viewModel = viewModel,
+                        category = true
+                    )
                 }
 
                 composable(MyTokioScreen.ListaRecomendacion.name) {
-                    SelectionCardList(
-                        selectionList = uiState.selectedListOfRecommendations,
-                        hasBorder = true,
-                        onClick = {
-                            viewModel.selectRecommendation(it)
-                            navController.navigate(MyTokioScreen.Recomendacion.name)
-                        }
+                    CategoriasScreen(
+                        contentType,
+                        uiState = uiState,
+                        navController = navController,
+                        viewModel = viewModel,
+                        category = false
                     )
+
 
                 }
 
@@ -184,6 +190,7 @@ fun MyTokioApp(
 @Composable
 fun CategoriasScreen(
     contentType: TokioContentType,
+    category: Boolean,
     uiState: TokioUiState,
     navController: NavHostController,
     viewModel: MyTokioViewModel
@@ -191,13 +198,24 @@ fun CategoriasScreen(
 
     if (contentType == TokioContentType.OnlyCategory) {
 
-        SelectionCardList(
-            selectionList = uiState.categoryList,
-            onClick = {
-                viewModel.selectRecommendationList(it)
-                navController.navigate(MyTokioScreen.ListaRecomendacion.name)
-            }
-        )
+        if (category)
+            SelectionCardList(
+                selectionList = uiState.categoryList,
+                onClick = {
+                    viewModel.selectRecommendationList(it)
+                    navController.navigate(MyTokioScreen.ListaRecomendacion.name)
+                }
+            )
+        else
+            SelectionCardList(
+                selectionList = uiState.selectedListOfRecommendations,
+                hasBorder = true,
+                onClick = {
+                    viewModel.selectRecommendation(it)
+                    navController.navigate(MyTokioScreen.Recomendacion.name)
+                }
+            )
+
 
     } else {
 

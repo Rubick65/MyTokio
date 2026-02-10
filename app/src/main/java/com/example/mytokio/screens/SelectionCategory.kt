@@ -50,8 +50,7 @@ fun SelectionCard(
             top = dimensionResource(R.dimen.category_card_top_padding)
         ),
         shape = RoundedCornerShape( // Forma de las cards
-            topEnd = dimensionResource(R.dimen.top_bottom_end),
-            bottomEnd = dimensionResource(R.dimen.top_bottom_end)
+            0.dp
         ),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.primary // Color para la card
