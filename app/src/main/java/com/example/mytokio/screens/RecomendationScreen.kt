@@ -26,6 +26,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.mytokio.R
 import com.example.mytokio.data.defautlRecomendation
@@ -38,72 +39,78 @@ import com.example.mytokio.ui.theme.MyTokioTheme
 @Composable
 fun RecomendationScreen(
     modifier: Modifier = Modifier,
-    contentType: TokioContentType, // Este es el content Type que indica que tipo de pantalla está actualmente
+    contentType: TokioContentType,
     onClick: (Recomendacion) -> Unit,
     currentRecommendation: Recomendacion
 ) {
-    LazyColumn(
-        modifier = modifier
-            .fillMaxSize()
-            .padding(dimensionResource(R.dimen.recommendation_screen_padding)),
-        horizontalAlignment = Alignment.CenterHorizontally
 
+    // Ancho máximo del contenido en pantallas grandes (tablet / horizontal)
+    val maxContentWidth: Dp =
+        if (contentType == TokioContentType.CategoryAndRecommendation) 900.dp
+        else Dp.Unspecified
+
+    Box(
+        modifier = modifier.fillMaxSize(),
+        contentAlignment = Alignment.TopCenter
     ) {
 
-//        if (contentType == TokioContentType.CategoryAndRecommendation) // Esto es para cuando la pantalla es grande (Teléfono horizontal tablet y z flip con doble pantalla)
-//            // Aquí va cuando es tablet y horizontal en general
-//
-//            else // Este caso es para cuando es normal y tiene el tamaño normal
-//                // Y aquí cuando es normal
-        item {
-            RecommendedImageBox(
-                currentImage = currentRecommendation.imagen,
-                modifier = Modifier.fillMaxWidth()
-            )
+        LazyColumn(
+            modifier = Modifier
+                .widthIn(max = maxContentWidth)
+                .padding(dimensionResource(R.dimen.recommendation_screen_padding)),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
 
-            Spacer(
-                modifier = Modifier.height(
-                    dimensionResource(R.dimen.recommendation_space_medium)
+            item {
+                RecommendedImageBox(
+                    currentImage = currentRecommendation.imagen,
+                    modifier = Modifier.fillMaxWidth()
                 )
-            )
-        }
 
-        item {
-            RatingAndFavRow(
-                modifier = Modifier.fillMaxWidth(),
-                recomendacion = currentRecommendation,
-                onClick = onClick
-            )
-
-            Spacer(
-                modifier = Modifier.height(
-                    dimensionResource(R.dimen.recommendation_space_small)
+                Spacer(
+                    modifier = Modifier.height(
+                        dimensionResource(R.dimen.recommendation_space_medium)
+                    )
                 )
-            )
-        }
+            }
 
-        item {
-            MapsAndShareRow(
-                modifier = Modifier.fillMaxWidth(),
-                currentRecommendation = currentRecommendation
-            )
-
-            Spacer(
-                modifier = Modifier.height(
-                    dimensionResource(R.dimen.recommendation_space_large)
+            item {
+                RatingAndFavRow(
+                    modifier = Modifier.fillMaxWidth(),
+                    recomendacion = currentRecommendation,
+                    onClick = onClick
                 )
-            )
-        }
 
-        item {
-            RecommendedDescriptionBox(
-                currentDescription = currentRecommendation.descripcion,
-                modifier = Modifier.fillMaxWidth()
-            )
-        }
+                Spacer(
+                    modifier = Modifier.height(
+                        dimensionResource(R.dimen.recommendation_space_small)
+                    )
+                )
+            }
 
-        item {
-            Spacer(modifier = Modifier.fillParentMaxHeight(0.15f))
+            item {
+                MapsAndShareRow(
+                    modifier = Modifier.fillMaxWidth(),
+                    currentRecommendation = currentRecommendation
+                )
+
+                Spacer(
+                    modifier = Modifier.height(
+                        dimensionResource(R.dimen.recommendation_space_large)
+                    )
+                )
+            }
+
+            item {
+                RecommendedDescriptionBox(
+                    currentDescription = currentRecommendation.descripcion,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+
+            item {
+                Spacer(modifier = Modifier.fillParentMaxHeight(0.15f))
+            }
         }
     }
 }
@@ -186,8 +193,7 @@ fun RecommendedDescriptionBox(
     @StringRes currentDescription: Int
 ) {
     Card(
-        modifier = modifier
-            .fillMaxWidth(),
+        modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(
             dimensionResource(R.dimen.recommendation_description_corner)
         ),
@@ -243,7 +249,6 @@ fun ActionImageButton(
     onClick: (Recomendacion) -> Unit,
     recomendacion: Recomendacion
 ) {
-
     Card(
         modifier = modifier.size(
             dimensionResource(R.dimen.action_button_size)
@@ -253,7 +258,10 @@ fun ActionImageButton(
         IconButton(onClick = { onClick(recomendacion) }) {
             Image(
                 painter = painterResource(
-                    if (recomendacion.favoritos.value) R.drawable.corarojo else R.drawable.cora
+                    if (recomendacion.favoritos.value)
+                        R.drawable.corarojo
+                    else
+                        R.drawable.cora
                 ),
                 contentDescription = null,
                 modifier = Modifier.size(
