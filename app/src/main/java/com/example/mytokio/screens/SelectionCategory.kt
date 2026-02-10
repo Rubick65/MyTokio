@@ -110,7 +110,7 @@ fun SelectionCardInformation(
                 // Imagen que representa cada catetegoría o recomendación
                 painter = painterResource(categoria.imagen),
                 contentDescription = stringResource(categoria.titulo),
-                contentScale = ContentScale.Crop, // Ocupa todo el espacio
+                contentScale = if (hasBorder) ContentScale.Crop else ContentScale.Fit,
                 modifier = Modifier.fillMaxSize(),
             )
         }
