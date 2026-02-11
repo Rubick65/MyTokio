@@ -89,9 +89,10 @@ fun SelectionCardInformation(
                 .padding(
                     end = dimensionResource(
                         if (hasBorder) R.dimen.image_card_end_padding
-                    else R.dimen.image_card_end_padding_category)
+                        else R.dimen.image_card_end_padding_category
+                    )
                 )
-                .weight( if (hasBorder) 0.7f else 0.5f),
+                .weight(if (hasBorder) 0.7f else 0.5f),
             shape = RoundedCornerShape( // El borde no está redondeado
                 0.dp
             ),
@@ -129,7 +130,9 @@ fun SelectionCardInformation(
     }
 }
 
-
+/**
+ * Lista con las diferentes cards de las categorías y recomendaciones
+ */
 @Composable
 fun SelectionCardList(
     modifier: Modifier = Modifier,
@@ -137,12 +140,11 @@ fun SelectionCardList(
     onClick: (Int) -> Unit,
     selectionList: List<Categoria>
 ) {
-
-
+    // Columna que permite deslizamiento
     LazyColumn(modifier = modifier.fillMaxSize()) {
-
+        // Se recorre la lista de elementos
         items(items = selectionList) { item ->
-
+            // Y se va añadiendo cada card a la columna
             SelectionCard(
                 onClick = onClick,
                 categoria = item,

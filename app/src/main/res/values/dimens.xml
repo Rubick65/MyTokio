@@ -41,7 +41,6 @@
     <dimen name="image_card_border">3dp</dimen>
 
 
-
     <!-- ============RECOMMENDATION SCREEN PADDING============ -->
     <dimen name="recommendation_screen_padding">16dp</dimen>
 
@@ -54,11 +53,13 @@
 
     <!-- ============RECOMMENDATION IMAGE============ -->
     <dimen name="recommendation_image_height">260dp</dimen>
+    <dimen name="recommendation_image_max_width">700dp</dimen>
 
 
     <!-- ============ACTION BUTTONS============ -->
     <dimen name="action_button_size">44dp</dimen>
     <dimen name="action_buttons_spacing">25dp</dimen>
+    <dimen name="action_buttons_padding">5dp</dimen>
 
     <!-- ============DESCRIPTION CARD============ -->
     <dimen name="recommendation_description_height">200dp</dimen>
@@ -69,7 +70,6 @@
 
     <!-- ============RATING============ -->
     <dimen name="rating_star_size">55dp</dimen>
-
 
 
 </resources>

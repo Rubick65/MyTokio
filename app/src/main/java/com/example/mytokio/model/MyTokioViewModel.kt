@@ -1,6 +1,5 @@
 package com.example.mytokio.model
 
-import androidx.compose.runtime.MutableState
 import androidx.lifecycle.ViewModel
 import com.example.mytokio.data.cafeterias
 import com.example.mytokio.data.categorias
@@ -52,12 +51,17 @@ class MyTokioViewModel : ViewModel() {
 
     }
 
+    /**
+     * Selecciona la categoría actual
+     */
     private fun selectCategory(categoryID: Int) {
+        // Filtra todas las categorías por el id pasado
         val categoryFilter = uiState.value.categoryList.find { it.id == categoryID }
 
+        // Actualiza el estado de la intefaz
         _uiState.update {
             it.copy(
-                currentCategory = categoryFilter!!
+                currentCategory = categoryFilter!! // Cambia la categoría actual y se asegura que no
             )
         }
 

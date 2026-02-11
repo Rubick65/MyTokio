@@ -200,4 +200,7 @@
     <string name="Separacion">\n\n</string>
     <string name="recomendacion">Te recomiendo este sitio</string>
 
+
+    <string name="icono_favoritos">"Icono de favoritos"</string>
+
 </resources>

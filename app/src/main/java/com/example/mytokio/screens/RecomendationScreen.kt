@@ -25,21 +25,17 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.mytokio.R
-import com.example.mytokio.data.defautlRecomendation
 import com.example.mytokio.model.dataObjects.Recomendacion
 import com.example.mytokio.pruebasBoton.mapRecomendation
 import com.example.mytokio.pruebasBoton.shareRecomendation
-import com.example.mytokio.ui.theme.MyTokioTheme
 
 // Pantalla del sitio
 @Composable
 fun RecomendationScreen(
     modifier: Modifier = Modifier,
-    contentType: TokioContentType,
     onRatingClick: (Recomendacion, Int) -> Unit,
     contentType: TokioContentType, // Este es el content Type que indica que tipo de pantalla está actualmente
     onClick: (Recomendacion) -> Unit,
@@ -48,7 +44,8 @@ fun RecomendationScreen(
 
     // Ancho máximo del contenido en pantallas grandes (tablet / horizontal)
     val maxContentWidth: Dp =
-        if (contentType == TokioContentType.CategoryAndRecommendation) 900.dp
+        if (contentType == TokioContentType.CategoryAndRecommendation)
+            dimensionResource(R.dimen.recommendation_image_max_width)
         else Dp.Unspecified
 
     Box(
@@ -75,25 +72,13 @@ fun RecomendationScreen(
                     )
                 )
             }
-        item {
-            RatingAndFavRow(
-                modifier = Modifier.fillMaxWidth(),
-                recomendacion = currentRecommendation,
-                onClick = onClick,
-                onRatingClick = onRatingClick
-            )
 
             item {
                 RatingAndFavRow(
                     modifier = Modifier.fillMaxWidth(),
                     recomendacion = currentRecommendation,
-                    onClick = onClick
-                )
-
-                Spacer(
-                    modifier = Modifier.height(
-                        dimensionResource(R.dimen.recommendation_space_small)
-                    )
+                    onClick = onClick,
+                    onRatingClick = onRatingClick
                 )
             }
 
@@ -117,9 +102,7 @@ fun RecomendationScreen(
                 )
             }
 
-            item {
-                Spacer(modifier = Modifier.fillParentMaxHeight(0.15f))
-            }
+
         }
     }
 }
@@ -138,7 +121,7 @@ fun RecommendedImageBox(
         Image(
             painter = painterResource(id = currentImage),
             contentDescription = null,
-            contentScale = ContentScale.Fit,
+            contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
     }
@@ -178,6 +161,7 @@ fun MapsAndShareRow(
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(
             dimensionResource(R.dimen.action_buttons_spacing)
         )
@@ -240,7 +224,10 @@ fun ActionImageButtonIntent(
         ),
         shape = RoundedCornerShape(50)
     ) {
-        IconButton(onClick = onClick, modifier = Modifier.padding(5.dp)) {
+        IconButton(
+            onClick = onClick,
+            modifier = Modifier.padding(dimensionResource(R.dimen.action_buttons_padding))
+        ) {
             Icon(
                 painter = painterResource(icon),
                 contentDescription = stringResource(contentDescription),
@@ -265,7 +252,11 @@ fun ActionImageButton(
         ),
         shape = RoundedCornerShape(50)
     ) {
-        IconButton(onClick = { onClick(recomendacion) }) {
+        IconButton(
+            onClick = { onClick(recomendacion) },
+            modifier = Modifier.padding(dimensionResource(R.dimen.action_buttons_padding))
+
+        ) {
             Image(
                 painter = painterResource(
                     if (recomendacion.favoritos.value)
@@ -273,7 +264,8 @@ fun ActionImageButton(
                     else
                         R.drawable.cora
                 ),
-                contentDescription = null,
+
+                contentDescription = stringResource(R.string.icono_favoritos),
                 modifier = Modifier.size(
                     dimensionResource(R.dimen.icon_size)
                 )
@@ -321,6 +313,7 @@ fun RatingBar(
         }
     }
 }
+
 
 //@Preview(showBackground = true, showSystemUi = true)
 //@Composable
