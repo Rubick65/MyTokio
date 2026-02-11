@@ -14,17 +14,21 @@ import kotlinx.coroutines.flow.update
 
 class MyTokioViewModel : ViewModel() {
 
-    private val _uiState = MutableStateFlow(TokioUiState())
-    val uiState: StateFlow<TokioUiState> = _uiState
+    private val _uiState = MutableStateFlow(TokioUiState()) // Estado de la interfaz
+    val uiState: StateFlow<TokioUiState> = _uiState // Datos de la interfaz
 
+    // Lo que ocurre cuando se inicializa
     init {
         initializeUIState()
     }
 
+    /**
+     * Incializa el estado de la ui
+     */
     private fun initializeUIState() {
         _uiState.value =
             TokioUiState(
-                categoryList = categorias
+                categoryList = categorias // Lista de categorías
             )
     }
 
@@ -52,7 +56,7 @@ class MyTokioViewModel : ViewModel() {
     }
 
     /**
-     * Selecciona la categoría actual
+     * Selecciona la categoría y actualiza el view model
      */
     private fun selectCategory(categoryID: Int) {
         // Filtra todas las categorías por el id pasado
@@ -61,18 +65,22 @@ class MyTokioViewModel : ViewModel() {
         // Actualiza el estado de la intefaz
         _uiState.update {
             it.copy(
-                currentCategory = categoryFilter!! // Cambia la categoría actual y se asegura que no
+                currentCategory = categoryFilter!! // Cambia la categoría actual y asegura que no sea nulo
             )
         }
 
     }
 
+    /**
+     * Selecciona la recomendación actual
+     */
     fun selectRecommendation(recommendationID: Int) {
+        // Filtra la recomendación actual en función del id pasado
         val recommendationFilter =
             uiState.value.selectedListOfRecommendations.find { it.id == recommendationID }
         _uiState.update {
             it.copy(
-                currentRecomendation = recommendationFilter!!
+                currentRecomendation = recommendationFilter!! // Cambia la recomendación actual, y asegura que no sea nula
             )
 
         }
@@ -85,44 +93,63 @@ class MyTokioViewModel : ViewModel() {
         // Cambia la lista seleccionada por la nueva lista
         _uiState.update {
             it.copy(
-                selectedListOfRecommendations = selectedRecomendation
+                selectedListOfRecommendations = selectedRecomendation // Cambia la lista de recomendaciones
             )
         }
     }
 
 
+    /**
+     * Indica que función debe ocurrir cuando se hace click en favoritos
+     */
     fun favoriteFunctions(recomendation: Recomendacion) {
-        recomendation.favoritos.value = !recomendation.favoritos.value
 
-        if (recomendation.favoritos.value)
+        // Si no está en favoritos
+        if (!recomendation.favoritos.value)
+        // Se añade a la lista de recomendacions
             addToFavorite(recomendation)
         else
+        // Se elimina de la lista de recomendaciones
             deleteFromFavorite(recomendation)
+
+        recomendation.favoritos.value =
+            !recomendation.favoritos.value // Cambia el estado de favoritos del objeto
     }
 
+    /**
+     * Añade a la lista de favoritos una recomendación
+     */
     private fun addToFavorite(recomendation: Recomendacion) {
-        val actualList = uiState.value.listOfFavoriteRecomendations
-        actualList.add(recomendation)
+        val actualList = uiState.value.listOfFavoriteRecomendations // Saca la lista actual
+        actualList.add(recomendation) // Añade a la lista
+        // Actualiza la lista actual
         _uiState.update { state ->
             state.copy(
-                listOfFavoriteRecomendations = actualList
+                listOfFavoriteRecomendations = actualList // Cambia la lista de de favoritos
             )
         }
     }
 
+    /**
+     * Elimina un elemento de la lista de favoritos
+     */
     private fun deleteFromFavorite(recomendation: Recomendacion) {
-        val updatedList = uiState.value.listOfFavoriteRecomendations
-        updatedList.remove(recomendation)
-
+        val updatedList = uiState.value.listOfFavoriteRecomendations // Saca la lista actual
+        updatedList.remove(recomendation) // Elimina el elemento
+        // Actualiza el estado de la ui
         _uiState.update { state ->
             state.copy(
-                listOfFavoriteRecomendations = updatedList
+                listOfFavoriteRecomendations = updatedList // Cambia la lista de recomendaciones
             )
         }
 
     }
 
+    /**
+     * Cambia el rating de la recomendación actual
+     */
     fun ratingChange(recommendation: Recomendacion, i: Int) {
+        // Cambia el rating actual
         recommendation.raiting.value =
             if (recommendation.raiting.value == i) 0 else i
     }

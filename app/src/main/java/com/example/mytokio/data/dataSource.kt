@@ -11,7 +11,7 @@ val categorias = listOf(
     Categoria(3, R.drawable.parque, R.string.categoria_3),
     Categoria(4, R.drawable.templo, R.string.categoria_4),
     Categoria(5, R.drawable.monumento, R.string.categoria_5),
-    Categoria(id = 6, R.drawable.corarojo, R.string.categoria_favoritos)
+    Categoria(id = 6, R.drawable.cora, R.string.categoria_favoritos)
 )
 
 val zonasTematicas = listOf(
