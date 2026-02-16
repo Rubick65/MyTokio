@@ -20,7 +20,7 @@ fun intentShare(
     //Preparamos intent de enviar
     return Intent(Intent.ACTION_SEND).apply {
         type = "text/plain" //Especificamos que va a ser texto
-        putExtra(Intent.EXTRA_TEXT, mensaje)
+        putExtra(Intent.EXTRA_TEXT, mensaje) //Le introducimos el mensaje
     }
 }
 
@@ -29,7 +29,8 @@ fun shareRecomendation(@StringRes urlId: Int): () -> Unit {
     //Necesario para ejecutar intents
     val context = LocalContext.current
     val url = stringResource(id = urlId)
-    //Transformamos la url a un enlace de google
+
+    //Transformamos la url a un enlace de google valido
     val uri = "https://www.google.com/maps/search/?api=1&query=${Uri.encode(url)}"
     val compartir = stringResource(R.string.comparte_este_sitio)
 
@@ -39,8 +40,10 @@ fun shareRecomendation(@StringRes urlId: Int): () -> Unit {
         append(stringResource(R.string.Separacion))
         append(uri) //enlace de google
     }
+    //Obtenemos el intent con el mensaje
     val intent = intentShare(mensaje)
     return {
+        //Se inicia el intent con createChooser para compartir
         context.startActivity(
             Intent.createChooser(
                 intent,
@@ -55,6 +58,7 @@ fun mapRecomendation(@StringRes urlId: Int): () -> Unit {
     //Necesario para ejecutar intents
     val context = LocalContext.current
     val url = stringResource(id = urlId)
+    //url de maps necesaria para formatear
     val urlMaps = stringResource(id = R.string.enlace_maps)
 
     //formato para abrir google maps
@@ -74,8 +78,10 @@ fun mapRecomendation(@StringRes urlId: Int): () -> Unit {
         try {
             //Se intenta abrir en google maps
             context.startActivity(maps)
+
         } catch(e: ActivityNotFoundException) {
             //En caso de dar error, se ejecutara en el navegador por defecto
+            //con el otro intent
             context.startActivity(navegadorIntent)
         }
     }
