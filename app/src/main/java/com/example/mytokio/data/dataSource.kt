@@ -380,7 +380,7 @@ val monumentos = listOf(
 )
 
 
-val defaultCategory = Categoria(5, R.drawable.jojo, R.string.categoria_5)
+val defaultCategory = Categoria(5, R.drawable.monumento, R.string.categoria_5)
 val defautlRecomendation = Recomendacion(
     10,
     R.drawable.jojo,

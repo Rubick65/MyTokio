@@ -8,8 +8,6 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.Font
 import com.example.mytokio.R
 
-// Set of Material typography styles to start with
-
 val Bungee = FontFamily(
     Font(R.font.bungee_regular)
 )
