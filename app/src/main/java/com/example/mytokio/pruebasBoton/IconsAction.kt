@@ -24,6 +24,10 @@ fun intentShare(
     }
 }
 
+/**
+ * Funcion para compartir la ubicacion actual a otras aplicaciones
+ * @StringRes urlID : url de la ubicacion a enviar
+ */
 @Composable
 fun shareRecomendation(@StringRes urlId: Int): () -> Unit {
     //Necesario para ejecutar intents
@@ -53,6 +57,10 @@ fun shareRecomendation(@StringRes urlId: Int): () -> Unit {
     }
 }
 
+/**
+ * Funcion para abrir en maps o en navegador la ubicacion actual
+ * @StringRes urlId: Url a visualizar
+ */
 @Composable
 fun mapRecomendation(@StringRes urlId: Int): () -> Unit {
     //Necesario para ejecutar intents
@@ -70,15 +78,14 @@ fun mapRecomendation(@StringRes urlId: Int): () -> Unit {
     //Intent para abrir en el navegador en caso de fallo
     val navegadorIntent = Intent(Intent.ACTION_VIEW,navegadorUri)
 
-    val maps = Intent(Intent.ACTION_VIEW,uri).apply {
+    val mapsIntent = Intent(Intent.ACTION_VIEW,uri).apply {
       //Se especifica que se abra en google maps
       setPackage(urlMaps)
     }
     return {
         try {
             //Se intenta abrir en google maps
-            context.startActivity(maps)
-
+            context.startActivity(mapsIntent)
         } catch(e: ActivityNotFoundException) {
             //En caso de dar error, se ejecutara en el navegador por defecto
             //con el otro intent
