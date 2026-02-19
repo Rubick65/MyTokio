@@ -35,6 +35,8 @@ import com.example.mytokio.model.MyTokioViewModel
 import com.example.mytokio.model.TokioUiState
 import com.example.mytokio.ui.theme.LocalImages
 
+// David López , Ruben Martín, Hugo de Pablo
+
 // Diferentes pantallas de la aplicación
 enum class MyTokioScreen() {
     Categorias, ListaRecomendacion, Recomendacion,

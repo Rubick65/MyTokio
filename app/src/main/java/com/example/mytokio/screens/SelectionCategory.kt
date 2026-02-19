@@ -32,6 +32,8 @@ import com.example.mytokio.data.zonasTematicas
 import com.example.mytokio.model.dataObjects.Categoria
 import com.example.mytokio.ui.theme.MyTokioTheme
 
+// David López, Ruben Martín, Hugo de Pablo
+
 /**
  * Crea la card general para todas las categorías y recomendaciones
  */

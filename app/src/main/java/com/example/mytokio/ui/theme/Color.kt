@@ -2,6 +2,8 @@ package com.example.mytokio.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+// David López , Ruben Martín, Hugo de Pablo
+
 val CARDS_OSCURO = Color(0xFF000000)
 val LETRAS_OSCURO = Color(0xFFFFFFFF)
 val BORDES_OSCURO = Color(0xFFFFFFFF)

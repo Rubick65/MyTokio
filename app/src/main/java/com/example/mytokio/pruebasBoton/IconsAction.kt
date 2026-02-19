@@ -10,6 +10,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.core.net.toUri
 import com.example.mytokio.R
 
+// David López , Ruben Martín, Hugo de Pablo
+
 /**
  * Funcion para crear el intent de compartir recomendacion
  */

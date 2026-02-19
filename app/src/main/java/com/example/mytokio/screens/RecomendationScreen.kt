@@ -32,6 +32,8 @@ import com.example.mytokio.model.dataObjects.Recomendacion
 import com.example.mytokio.pruebasBoton.mapRecomendation
 import com.example.mytokio.pruebasBoton.shareRecomendation
 
+// David López , Ruben Martín, Hugo de Pablo
+
 // Pantalla del sitio
 @Composable
 fun RecomendationScreen(

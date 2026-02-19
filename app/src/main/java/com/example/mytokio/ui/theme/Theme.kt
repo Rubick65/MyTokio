@@ -14,6 +14,8 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.platform.LocalContext
 import com.example.mytokio.R
 
+// David López , Ruben Martín, Hugo de Pablo
+
 private val DarkColorScheme = darkColorScheme(
     primary = CARDS_OSCURO, //Color de fondo de cards
     secondary = LETRAS_OSCURO, //Color de letras

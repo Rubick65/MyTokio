@@ -12,6 +12,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 
+// David López , Ruben Martín, Hugo de Pablo
+
 class MyTokioViewModel : ViewModel() {
 
     private val _uiState = MutableStateFlow(TokioUiState()) // Estado de la interfaz

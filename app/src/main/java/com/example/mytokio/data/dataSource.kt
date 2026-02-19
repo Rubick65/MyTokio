@@ -4,7 +4,7 @@ import com.example.mytokio.R
 import com.example.mytokio.model.dataObjects.Categoria
 import com.example.mytokio.model.dataObjects.Recomendacion
 
-
+// David López , Ruben Martín, Hugo de Pablo
 val categorias = listOf(
     Categoria(1, R.drawable.parque_tematico, R.string.categoria_1),
     Categoria(2, R.drawable.restaurante, R.string.categoria_2),

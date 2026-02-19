@@ -16,6 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.mytokio.screens.MyTokioApp
 import com.example.mytokio.ui.theme.MyTokioTheme
 
+// David López , Ruben Martín, Hugo de Pablo
+
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {

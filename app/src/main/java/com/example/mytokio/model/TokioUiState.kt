@@ -6,6 +6,8 @@ import com.example.mytokio.data.defautlRecomendation
 import com.example.mytokio.model.dataObjects.Categoria
 import com.example.mytokio.model.dataObjects.Recomendacion
 
+// David López , Ruben Martín, Hugo de Pablo
+
 data class TokioUiState(
     val categoryList: List<Categoria> = emptyList(),
     val currentCategory: Categoria = defaultCategory,

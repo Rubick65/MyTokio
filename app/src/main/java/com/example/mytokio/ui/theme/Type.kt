@@ -8,6 +8,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.Font
 import com.example.mytokio.R
 
+// David López , Ruben Martín, Hugo de Pablo
+
 val Bungee = FontFamily(
     Font(R.font.bungee_regular)
 )
