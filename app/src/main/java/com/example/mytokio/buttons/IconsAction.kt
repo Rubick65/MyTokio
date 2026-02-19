@@ -1,4 +1,4 @@
-package com.example.mytokio.pruebasBoton
+package com.example.mytokio.buttons
 
 import android.content.ActivityNotFoundException
 import android.content.Intent

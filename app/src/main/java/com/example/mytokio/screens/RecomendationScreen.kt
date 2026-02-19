@@ -26,11 +26,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
 import com.example.mytokio.R
 import com.example.mytokio.model.dataObjects.Recomendacion
-import com.example.mytokio.pruebasBoton.mapRecomendation
-import com.example.mytokio.pruebasBoton.shareRecomendation
+import com.example.mytokio.buttons.mapRecomendation
+import com.example.mytokio.buttons.shareRecomendation
 
 // David López , Ruben Martín, Hugo de Pablo
 
